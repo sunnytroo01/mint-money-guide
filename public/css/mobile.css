@@ -478,11 +478,47 @@
     white-space: pre-wrap;
   }
 
-  /* Prevent all text overflow on mobile */
-  .prose-custom *, article *, .container * {
+  /* Clean mobile article layout */
+  article.container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    padding-top: 1rem !important;
+  }
+
+  /* Article header - mobile */
+  article header {
+    margin-bottom: 2rem !important;
+  }
+
+  article header h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.5rem !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  article header .flex {
+    flex-wrap: wrap;
+    gap: 0.75rem !important;
+  }
+
+  /* Featured image - mobile */
+  article img:first-of-type {
+    margin-bottom: 2rem !important;
+    border-radius: 1rem !important;
+  }
+
+  /* Content spacing - mobile */
+  .prose-custom > * {
+    max-width: 100% !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    max-width: 100% !important;
+  }
+
+  .prose-custom strong {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   /* Fix for tables on mobile */
@@ -491,11 +527,28 @@
     overflow-x: auto;
     white-space: nowrap;
     max-width: 100%;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Fix long URLs and links */
   .prose-custom a {
-    word-break: break-all;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Author box - mobile friendly */
+  .card.p-8.mt-12 {
+    padding: 1.5rem !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+  }
+
+  .card .w-24.h-24 {
+    width: 5rem !important;
+    height: 5rem !important;
+    margin: 0 auto !important;
   }
 }
 
