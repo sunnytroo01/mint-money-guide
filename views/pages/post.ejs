@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%= meta.title %></title>
   <meta name="description" content="<%= meta.description %>">
   <meta name="keywords" content="<%= meta.keywords %>">
@@ -103,6 +103,23 @@
       const progress = (scrolled / height) * 100;
       document.getElementById('reading-progress').style.width = Math.min(progress, 100) + '%';
     });
+
+    // Prevent Google Lens context menu on images
+    document.addEventListener('contextmenu', function(event) {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
+    });
+
+    // Prevent double-tap zoom
+    let lastTouchEnd = 0;
+    document.addEventListener('touchend', function(event) {
+      const now = Date.now();
+      if (now - lastTouchEnd <= 300) {
+        event.preventDefault();
+      }
+      lastTouchEnd = now;
+    }, false);
   </script>
   <script src="/js/graphics.js"></script>
   <script src="/js/widow-preventer.js"></script>

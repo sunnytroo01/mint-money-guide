@@ -1,505 +1,163 @@
-/* ===== COMPREHENSIVE MOBILE OPTIMIZATION ===== */
+/* ==================== RESPONSIVE BLOG VIEWER - MOBILE OPTIMIZED ==================== */
+/* Based on comprehensive mobile-first best practices */
 
-/* Base Mobile Optimizations */
+/* ==================== ROOT & RESET ==================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* ==================== MOBILE BASE STYLES (< 768px) ==================== */
 @media (max-width: 768px) {
-  /* Prevent horizontal scroll */
+
+  /* ==================== PREVENT HORIZONTAL SCROLL ==================== */
   html, body {
     overflow-x: hidden;
     max-width: 100vw;
+    width: 100%;
   }
 
-  /* Better touch targets - Apple HIG standard */
-  button, a, input, textarea, select, .clickable {
-    min-height: 44px;
+  /* ==================== BODY & TYPOGRAPHY ==================== */
+  body {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* ==================== FLUID TYPOGRAPHY WITH CLAMP ==================== */
+
+  /* Headings - Fluid and responsive */
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.875rem !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.75rem !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  h4 {
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem) !important;
+    line-height: 1.4 !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* ==================== TEXT OVERFLOW PREVENTION ==================== */
+
+  p, div, span, li, td, th {
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    max-width: 100%;
+  }
+
+  /* Links and URLs */
+  a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  /* Strong and emphasis */
+  strong, em, b, i {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* ==================== IMAGES - RESPONSIVE & NO GOOGLE LENS ==================== */
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    /* Prevent Google Lens */
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    -webkit-touch-callout: none !important;
+    pointer-events: none !important;
+  }
+
+  /* ==================== INPUTS - PREVENT iOS ZOOM ==================== */
+
+  input, textarea, select, button {
+    font-size: 16px !important; /* Minimum to prevent iOS auto-zoom */
+    font-family: inherit;
+  }
+
+  /* ==================== TOUCH-FRIENDLY BUTTONS ==================== */
+
+  button, .btn, .btn-primary, .btn-secondary, .btn-outline {
+    min-height: 44px !important; /* Apple HIG standard */
+    min-width: 44px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 16px !important;
+    touch-action: manipulation;
     -webkit-tap-highlight-color: rgba(44, 95, 79, 0.2);
   }
 
-  /* Disable hover effects on touch devices */
-  * {
-    -webkit-touch-callout: none;
+  /* Touch-friendly links */
+  a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    -webkit-tap-highlight-color: rgba(44, 95, 79, 0.2);
   }
 
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Typography - Mobile Optimized */
-@media (max-width: 768px) {
-  /* Hero text */
-  h1.text-5xl, h1.text-7xl {
-    font-size: 2.25rem !important;
-    line-height: 1.2 !important;
-  }
-
-  /* Section headings */
-  h2.text-4xl, h2.text-5xl {
-    font-size: 1.875rem !important;
-    line-height: 1.3 !important;
-  }
-
-  h3.text-3xl, h3.text-4xl {
-    font-size: 1.5rem !important;
-    line-height: 1.4 !important;
-  }
-
-  /* Paragraph text - optimal mobile reading */
-  p, li {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-
-  /* Article content */
-  article h1 {
-    font-size: 2rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 1.5rem !important;
-  }
-
-  article h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.3 !important;
-    margin-top: 2rem !important;
-    margin-bottom: 1rem !important;
-  }
-
-  article h3 {
-    font-size: 1.25rem !important;
-    line-height: 1.4 !important;
-    margin-top: 1.5rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-}
-
-/* Layout - Mobile Spacing */
-@media (max-width: 768px) {
-  /* Container padding */
-  .container {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
-  /* Reduce excessive vertical spacing */
-  section.py-24, .py-24 {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
-  }
-
-  section.py-20, .py-20 {
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
-  }
-
-  section.py-16, .py-16 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  /* Margins */
-  .mb-24 {
-    margin-bottom: 3rem !important;
-  }
-
-  .mb-20 {
-    margin-bottom: 2.5rem !important;
-  }
-
-  .mb-12 {
-    margin-bottom: 2rem !important;
-  }
-
-  .mb-8 {
-    margin-bottom: 1.5rem !important;
-  }
-}
-
-/* Navigation - Mobile Optimized */
-@media (max-width: 768px) {
-  nav .container {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-  #mobile-menu a {
-    padding: 1rem 0;
-    font-size: 1.125rem;
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  #mobile-menu a:last-child {
-    border-bottom: none;
-  }
-
-  #mobile-menu-toggle {
-    padding: 0.75rem;
-  }
-}
-
-/* Buttons - Mobile Optimized */
-@media (max-width: 768px) {
-  .btn-primary, .btn-secondary, .btn-outline {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .btn-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    width: 100%;
-  }
-
-  .btn-group .btn-primary,
-  .btn-group .btn-secondary,
-  .btn-group .btn-outline {
-    width: 100%;
-  }
-}
-
-/* Cards - Mobile Optimized */
-@media (max-width: 768px) {
-  .post-card {
-    margin-bottom: 1.5rem;
-  }
-
-  .post-card img {
-    height: 14rem;
-    object-fit: cover;
-  }
-
-  .post-card .p-6 {
-    padding: 1.25rem;
-  }
-
-  .post-card h3 {
-    font-size: 1.125rem;
-    line-height: 1.4;
-  }
-
-  .card {
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: 0.75rem;
-  }
-}
-
-/* Grid Layouts - Mobile Stack */
-@media (max-width: 768px) {
-  .grid-cols-1.md\:grid-cols-2,
-  .grid-cols-1.md\:grid-cols-3,
-  .grid-cols-1.lg\:grid-cols-3 {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
-  }
-}
-
-/* Images - Mobile Optimized */
-@media (max-width: 768px) {
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  article img {
-    border-radius: 0.75rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .post-card-image {
-    height: 14rem;
-  }
-}
-
-/* Footer - Mobile Optimized */
-@media (max-width: 768px) {
-  footer {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  footer .grid {
-    gap: 2rem;
-  }
-
-  footer h3 {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
-  }
-
-  footer ul li {
-    padding: 0.5rem 0;
-  }
-
-  footer .flex.md\:flex-row {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
-  }
-}
-
-/* Forms - Mobile Optimized */
-@media (max-width: 768px) {
-  input, textarea, select {
-    font-size: 16px !important; /* Prevents iOS zoom */
-    padding: 0.875rem 1rem;
-    border-radius: 0.5rem;
-  }
-
-  textarea {
-    min-height: 150px;
-  }
-}
-
-/* Author Bio - Mobile */
-@media (max-width: 768px) {
-  .card.p-8 {
-    padding: 1.25rem !important;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .card .w-24 {
-    width: 5rem !important;
-    height: 5rem !important;
-  }
-
-  .card .text-3xl {
-    font-size: 1.875rem !important;
-  }
-}
-
-/* Tags - Mobile */
-@media (max-width: 768px) {
-  .tag {
-    font-size: 0.875rem;
-    padding: 0.5rem 0.75rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .flex.flex-wrap.gap-2 {
-    gap: 0.5rem;
-  }
-}
-
-/* Breadcrumbs - Mobile */
-@media (max-width: 768px) {
-  nav.text-sm {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Back to Top Button - Mobile */
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 1rem;
-    right: 1rem;
-    width: 3.5rem;
-    height: 3.5rem;
-  }
-
-  .back-to-top svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-}
-
-/* Cookie Consent - Mobile */
-@media (max-width: 768px) {
-  #cookie-consent {
-    padding: 1rem;
-  }
-
-  #cookie-consent .container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  #cookie-consent p {
-    text-align: center;
-    font-size: 0.875rem;
-  }
-
-  #cookie-consent button {
-    width: 100%;
-  }
-}
-
-/* Reading Progress - Mobile */
-@media (max-width: 768px) {
-  .reading-progress {
-    height: 3px;
-  }
-}
-
-/* Related Posts - Mobile */
-@media (max-width: 768px) {
-  section.mt-20 {
-    margin-top: 3rem !important;
-  }
-
-  section.mt-20 h2 {
-    font-size: 1.75rem !important;
-    margin-bottom: 2rem !important;
-  }
-}
-
-/* Graphics - Mobile Optimized */
-@media (max-width: 768px) {
-  .blog-graphic {
-    padding: 1.25rem !important;
-    margin: 2rem auto !important;
-  }
-
-  .compound-visual {
-    height: 280px !important;
-    padding: 1rem !important;
-  }
-
-  .year-block {
-    width: 70px !important;
-    font-size: 0.75rem !important;
-    padding: 0.5rem 0.25rem !important;
-  }
-
-  .streams-container {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 1rem !important;
-  }
-
-  .income-stream {
-    padding: 1rem !important;
-  }
-
-  .stream-icon {
-    font-size: 2rem !important;
-  }
-
-  .stream-amount {
-    font-size: 1.125rem !important;
-  }
-
-  .total-income {
-    padding: 1rem 1.5rem !important;
-    font-size: 1.125rem !important;
-  }
-
-  .timeline-path {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-  }
-
-  .milestone-icon {
-    width: 70px !important;
-    height: 70px !important;
-    font-size: 1.5rem !important;
-  }
-
-  .milestone-amount {
-    font-size: 1.125rem !important;
-  }
-
-  .chart-title, .compound-title, .streams-title,
-  .pie-title, .timeline-title, .risk-title, .dca-title {
-    font-size: 1.25rem !important;
-    margin-bottom: 1.5rem !important;
-  }
-}
-
-/* Prose Content - Mobile Optimized */
-@media (max-width: 768px) {
-  .prose-custom {
-    font-size: 1rem;
-  }
-
-  .prose-custom h2 {
-    font-size: 1.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-  }
-
-  .prose-custom h3 {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-  }
-
-  .prose-custom p {
-    margin-bottom: 1.25rem;
-    line-height: 1.7;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-  }
-
-  .prose-custom ul, .prose-custom ol {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
-  }
-
-  .prose-custom li {
-    margin-bottom: 0.5rem;
-  }
-
-  .prose-custom blockquote {
-    margin: 1.5rem 0;
-    padding: 1rem 1.25rem;
-  }
-
-  .prose-custom code {
-    font-size: 0.875rem;
-    padding: 0.125rem 0.375rem;
-  }
-
-  .prose-custom pre {
-    margin: 1.5rem -1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    overflow-x: auto;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-  }
+  /* ==================== ARTICLE LAYOUT ==================== */
 
-  /* Clean mobile article layout - prevent horizontal scroll */
   article.container {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: clamp(1rem, 4vw, 2rem) !important;
+    padding-right: clamp(1rem, 4vw, 2rem) !important;
     padding-top: 1rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 100% !important;
     overflow-x: hidden !important;
-    max-width: 100vw !important;
+    width: 100% !important;
   }
 
-  /* Article header - mobile */
+  /* Article header */
   article header {
     margin-bottom: 2rem !important;
     width: 100%;
+    max-width: 100%;
   }
 
   article header h1 {
-    font-size: 1.75rem !important;
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
     line-height: 1.25 !important;
     margin-bottom: 1.5rem !important;
     word-wrap: break-word;
     overflow-wrap: break-word;
     width: 100%;
+    max-width: 100%;
   }
 
   article header .flex {
@@ -508,23 +166,29 @@
     width: 100%;
   }
 
-  /* Featured image - mobile */
+  /* Category badge and meta info */
+  .category-badge {
+    font-size: 0.875rem !important;
+    padding: 0.375rem 0.75rem !important;
+    white-space: nowrap;
+  }
+
+  /* Featured image */
   article img:first-of-type {
     margin-bottom: 2rem !important;
     border-radius: 1rem !important;
-    width: 100%;
-    max-width: 100%;
-    pointer-events: none !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    -webkit-touch-callout: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  /* Content spacing - mobile - match header width */
+  /* ==================== PROSE CONTENT - MATCH HEADER WIDTH ==================== */
+
   .prose-custom {
     width: 100% !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.7;
   }
 
   .prose-custom > * {
@@ -532,60 +196,126 @@
     width: 100% !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    box-sizing: border-box !important;
   }
 
-  .prose-custom p,
-  .prose-custom h2,
-  .prose-custom h3,
-  .prose-custom h4,
+  /* Prose headings */
+  .prose-custom h1 {
+    font-size: clamp(1.75rem, 5vw, 2.5rem) !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .prose-custom h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem) !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .prose-custom h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem) !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Prose paragraphs */
+  .prose-custom p {
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  /* Lists */
   .prose-custom ul,
-  .prose-custom ol,
-  .prose-custom li,
-  .prose-custom blockquote {
+  .prose-custom ol {
+    max-width: 100% !important;
+    padding-left: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .prose-custom li {
     max-width: 100% !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
+    margin-bottom: 0.5rem !important;
   }
 
-  .prose-custom strong {
+  /* Blockquotes */
+  .prose-custom blockquote {
+    max-width: 100% !important;
+    padding-left: 1rem !important;
+    border-left: 4px solid #2C5F4F;
+    margin: 1.5rem 0 !important;
+    font-style: italic;
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 
-  /* Fix for tables on mobile */
-  .prose-custom table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    max-width: 100%;
-    width: 100%;
+  /* ==================== CODE BLOCKS ==================== */
+
+  .prose-custom code {
+    font-family: 'Courier New', monospace;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+
+  .prose-custom pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0 !important;
+    font-size: 0.875rem;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* Fix long URLs and links */
+  .prose-custom pre code {
+    word-break: normal;
+    white-space: pre;
+  }
+
+  /* ==================== TABLES ==================== */
+
+  .prose-custom table {
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+    border-collapse: collapse;
+    margin: 1.5rem 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .prose-custom table th,
+  .prose-custom table td {
+    padding: 0.75rem !important;
+    font-size: 0.875rem !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* ==================== LINKS IN PROSE ==================== */
+
   .prose-custom a {
     word-break: break-word;
     overflow-wrap: break-word;
+    -webkit-hyphens: auto;
     hyphens: auto;
     max-width: 100%;
+    text-decoration: underline;
   }
 
-  /* Disable Google Lens on all images */
-  article img,
-  .prose-custom img {
-    pointer-events: none !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    -webkit-touch-callout: none !important;
-  }
+  /* ==================== AUTHOR BOX ==================== */
 
-  /* Author box - mobile friendly */
   .card.p-8.mt-12 {
     padding: 1.5rem !important;
     flex-direction: column !important;
     text-align: center !important;
     gap: 1rem !important;
+    max-width: 100% !important;
   }
 
   .card .w-24.h-24 {
@@ -593,98 +323,255 @@
     height: 5rem !important;
     margin: 0 auto !important;
   }
-}
 
-/* Small Mobile Devices (< 375px) */
-@media (max-width: 374px) {
+  .card h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .card p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* ==================== NAVIGATION ==================== */
+
+  nav {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  nav a {
+    font-size: 0.875rem !important;
+    padding: 0.5rem !important;
+  }
+
+  /* Breadcrumbs */
+  nav.text-sm {
+    font-size: 0.875rem !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  /* ==================== TAGS ==================== */
+
+  .tag {
+    font-size: 0.875rem !important;
+    padding: 0.375rem 0.75rem !important;
+    display: inline-block;
+    margin: 0.25rem !important;
+    word-break: break-word;
+  }
+
+  /* ==================== CARDS & CONTAINERS ==================== */
+
+  .card {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: break-word;
+  }
+
   .container {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100% !important;
   }
 
-  h1.text-5xl, h1.text-7xl {
-    font-size: 2rem !important;
+  /* ==================== SPACING UTILITIES ==================== */
+
+  .py-24 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 
-  .btn-primary, .btn-secondary, .btn-outline {
-    padding: 0.875rem 1.25rem;
-    font-size: 0.9375rem;
+  .py-20 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
   }
 
-  .post-card img {
-    height: 12rem;
-  }
-
-  .streams-container {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Landscape Mobile */
-@media (max-width: 768px) and (orientation: landscape) {
-  section.py-20 {
+  .py-16 {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
 
-  .hero-gradient {
-    padding-top: 3rem !important;
-    padding-bottom: 3rem !important;
+  .py-12 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 1rem !important;
+  }
+
+  .mt-12 {
+    margin-top: 1.5rem !important;
+  }
+
+  /* ==================== GRID & FLEX ==================== */
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  /* ==================== READING PROGRESS BAR ==================== */
+
+  .reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2C5F4F, #3D7A66);
+    z-index: 9999;
+    transition: width 0.2s ease;
+  }
+
+  /* ==================== ACCESSIBILITY ==================== */
+
+  /* Focus states for keyboard navigation */
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid #2C5F4F;
+    outline-offset: 2px;
+  }
+
+  /* Screen reader only */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }
 
-/* Performance Optimizations */
-@media (max-width: 768px) {
-  /* Reduce animations on mobile for better performance */
-  * {
-    animation-duration: 0.3s !important;
+/* ==================== SMALL MOBILE DEVICES (< 375px) ==================== */
+@media (max-width: 374px) {
+
+  .container, article.container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 
-  /* Optimize transforms */
-  .transform {
-    will-change: transform;
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem) !important;
   }
 
-  /* Reduce motion for accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    * {
-      animation: none !important;
-      transition: none !important;
-    }
+  h2 {
+    font-size: clamp(1.25rem, 4vw, 1.75rem) !important;
   }
-}
 
-/* Mobile Menu Animation */
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+  h3 {
+    font-size: clamp(1.125rem, 3vw, 1.5rem) !important;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  button, .btn {
+    padding: 0.625rem 1rem !important;
+    font-size: 14px !important;
+  }
+
+  .prose-custom {
+    font-size: 1rem;
   }
 }
 
-/* Smooth scroll behavior */
-@media (max-width: 768px) {
-  html {
-    scroll-padding-top: 80px; /* Account for fixed header */
+/* ==================== LANDSCAPE PHONES (576px - 767px) ==================== */
+@media (min-width: 576px) and (max-width: 767px) {
+
+  .container, article.container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 2.75rem) !important;
+  }
+
+  .prose-custom {
+    font-size: clamp(1.0625rem, 2.5vw, 1.125rem);
   }
 }
 
-/* iOS Safari specific fixes */
-@supports (-webkit-touch-callout: none) {
-  @media (max-width: 768px) {
-    /* Fix for iOS Safari bottom bar */
-    body {
-      min-height: -webkit-fill-available;
-    }
+/* ==================== TABLETS (768px - 991px) ==================== */
+@media (min-width: 768px) and (max-width: 991px) {
 
-    /* Fix for sticky elements on iOS */
-    .sticky {
-      position: -webkit-sticky;
-      position: sticky;
-    }
+  article.container {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .prose-custom {
+    font-size: 1.125rem;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 5vw, 3rem) !important;
+  }
+
+  h2 {
+    font-size: clamp(1.875rem, 4vw, 2.5rem) !important;
+  }
+}
+
+/* ==================== DESKTOP (992px and up) ==================== */
+@media (min-width: 992px) {
+
+  /* Desktop uses default Tailwind styles */
+  /* This mobile.css primarily targets mobile devices */
+
+  article.container {
+    max-width: 960px;
+  }
+}
+
+/* ==================== LARGE DESKTOP (1200px and up) ==================== */
+@media (min-width: 1200px) {
+
+  article.container {
+    max-width: 1140px;
+  }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  h1 { font-size: 18pt; }
+  h2 { font-size: 16pt; }
+  h3 { font-size: 14pt; }
+
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .reading-progress,
+  nav,
+  .card {
+    display: none;
   }
 }
