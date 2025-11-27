@@ -10,7 +10,8 @@
       "Bash(del routesadmin.js)",
       "Bash(del middlewareauth.js)",
       "Bash(taskkill:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

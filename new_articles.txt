@@ -1,0 +1,171 @@
+  },
+  {
+    _id: '22',
+    title: "I Earned $8,247 in Credit Card Rewards Last Year Without Going Into Debt: Here's My Exact System",
+    slug: "credit-card-rewards-system-8000-cash-back",
+    excerpt: "Most people leave thousands in credit card rewards on the table. I'll show you the exact system I use to maximize cash back, points, and travel rewards without carrying a balance or paying interest.",
+    metaDescription: "Learn the exact credit card rewards strategy that earned me $8,247 in one year. Maximize cash back, points, and travel rewards without debt using this proven system for 2025.",
+    metaKeywords: "credit card rewards, cash back credit cards, travel rewards, credit card points, maximize rewards, best rewards cards, credit card strategy, points and miles, travel hacking, free travel",
+    content: `<h2>Introduction: The $8,247 Nobody Talks About</h2>
+<p>Last year, I earned $8,247 in credit card rewards. Not points I'll never use. Not miles trapped in an airline program. Real value: $4,100 in cash back, $2,900 in travel I actually took, and $1,247 in statement credits that paid for expenses I was buying anyway.</p>
+<p>I didn't go into debt. I didn't pay a cent in interest. I didn't change my spending habits or buy things I didn't need.</p>
+<p>This isn't about "travel hacking" with 12 credit cards and spreadsheets tracking 5/24 rules. This is a simple system anyone can use to extract thousands in value from everyday spending.</p>
+
+<h2>The Foundation: Three Non-Negotiable Rules</h2>
+<p>Before we talk strategy, let's establish the rules that make this work:</p>
+
+<p><strong>Rule #1: Never carry a balance</strong></p>
+<ul>
+<li>Pay statement balance in full every month</li>
+<li>Set up autopay so you never miss a payment</li>
+<li>One month of interest wipes out a year of rewards</li>
+</ul>
+
+<p><strong>Rule #2: Don't spend more to earn more</strong></p>
+<ul>
+<li>Only put planned purchases on cards</li>
+<li>If you wouldn't buy it with cash, don't buy it for points</li>
+<li>A 2% reward on unnecessary spending is still -98% ROI</li>
+</ul>
+
+<p><strong>Rule #3: Treat credit cards like debit cards</strong></p>
+<ul>
+<li>Only spend money you already have</li>
+<li>Check account balance before purchases</li>
+<li>Track spending weekly to stay on budget</li>
+</ul>
+
+<p>If you can't follow these three rules religiously, stop reading. Stick with a debit card. Credit card rewards are worthless if they lead to debt.</p>
+
+<h2>My 3-Card System (Covers 98% of Spending)</h2>
+<p>I use three cards that together maximize rewards on virtually everything:</p>
+
+<p><strong>Card #1: Flat 2% cash back on everything (Citi Double Cash or Fidelity Rewards)</strong></p>
+<ul>
+<li>This is my default card for anything not covered by cards 2-3</li>
+<li>No categories to track, no rotating bonuses, just 2% on everything</li>
+<li>2024 earnings from this card alone: $2,840</li>
+</ul>
+
+<p><strong>Card #2: 3% to 6% on specific categories (Chase Freedom Unlimited or Amex Blue Cash Preferred)</strong></p>
+<ul>
+<li>Groceries: 6% (saves me ~$600/year on $10K grocery spend)</li>
+<li>Gas: 3% (saves me ~$180/year on $6K gas spend)</li>
+<li>Streaming services: 6% (saves me ~$50/year)</li>
+<li>2024 earnings: $1,680</li>
+</ul>
+
+<p><strong>Card #3: Travel card with strong signup bonus (Chase Sapphire Preferred or Capital One Venture)</strong></p>
+<ul>
+<li>60K to 75K point signup bonus = $600 to $900 in travel</li>
+<li>3x points on dining and travel</li>
+<li>Use points for flights and hotels (1.25x to 1.5x value)</li>
+<li>2024 value: $3,727 ($2,100 signup bonus + $1,627 ongoing rewards)</li>
+</ul>
+
+<h2>The Monthly Routine (15 Minutes)</h2>
+<p>Here's exactly what I do each month to maximize rewards with minimal effort:</p>
+
+<p><strong>Week 1: Choose the right card for each purchase</strong></p>
+<ul>
+<li>Groceries → Card #2 (6%)</li>
+<li>Gas → Card #2 (3%)</li>
+<li>Dining → Card #3 (3x points)</li>
+<li>Everything else → Card #1 (2%)</li>
+</ul>
+
+<p><strong>Week 2: Mid-month check-in (5 minutes)</strong></p>
+<ul>
+<li>Log into each card's app</li>
+<li>Verify all charges are legitimate</li>
+<li>Make sure I'm on track with budget</li>
+</ul>
+
+<p><strong>Week 4: Payment and reconciliation (10 minutes)</strong></p>
+<ul>
+<li>Pay all three statements in full</li>
+<li>Check that rewards posted correctly</li>
+<li>Note total rewards earned that month</li>
+</ul>
+
+<p><strong>Once per quarter: Redeem rewards (15 minutes)</strong></p>
+<ul>
+<li>Cash back cards: transfer to checking account</li>
+<li>Travel card: book upcoming trips or transfer to partners</li>
+<li>Track year-to-date rewards earned</li>
+</ul>
+
+<h2>Real Numbers: My 2024 Breakdown</h2>
+<p>Here's exactly what I earned from each rewards strategy:</p>
+
+<p><strong>Flat 2% card (Citi Double Cash)</strong></p>
+<ul>
+<li>$142,000 in annual spending × 2% = $2,840</li>
+</ul>
+
+<p><strong>Category bonus card (Amex Blue Cash Preferred)</strong></p>
+<ul>
+<li>Groceries: $10,000 × 6% = $600</li>
+<li>Gas: $6,000 × 3% = $180</li>
+<li>Streaming: $900 × 6% = $54</li>
+<li>Total: $834 rewards - $95 annual fee = $739 net</li>
+</ul>
+
+<p><strong>Travel card (Chase Sapphire Preferred)</strong></p>
+<ul>
+<li>Signup bonus: 75,000 points = $937 in travel</li>
+<li>Dining: $8,000 × 3x = 24,000 points = $300 value</li>
+<li>Travel: $5,000 × 3x = 15,000 points = $187 value</li>
+<li>Other spending: $20,000 × 1x = 20,000 points = $250 value</li>
+<li>Total: $1,674 - $95 annual fee = $1,579 net</li>
+</ul>
+
+<p><strong>Total value: $8,247</strong></p>
+<ul>
+<li>Cash back: $4,089</li>
+<li>Travel rewards used: $2,611</li>
+<li>Credits/bonuses: $1,547</li>
+</ul>
+
+<h2>Common Mistakes That Kill Returns</h2>
+<p><strong>Mistake #1: Paying annual fees on cards you don't use</strong></p>
+<ul>
+<li>I review all cards every December</li>
+<li>If a card didn't earn rewards exceeding its annual fee, I cancel it</li>
+<li>Don't keep cards "for credit history" if they cost you money</li>
+</ul>
+
+<p><strong>Mistake #2: Chasing rewards you'll never use</strong></p>
+<ul>
+<li>Airline miles are worthless if you never fly that airline</li>
+<li>Hotel points lose value when programs devalue them</li>
+<li>Cash back is king, flexible points are second, specific miles are distant third</li>
+</ul>
+
+<p><strong>Mistake #3: Not reading fine print on benefits</strong></p>
+<ul>
+<li>Many cards offer $300+ in annual credits (Uber, streaming, airline fees)</li>
+<li>I earned $370 last year in credits I almost missed</li>
+<li>Set calendar reminders to use credits before they expire</li>
+</ul>
+
+<h2>The Bottom Line</h2>
+<p>Credit card rewards are free money, but only if you play by the rules. Never carry a balance. Never spend more to earn more. Treat credit like debit.</p>
+
+<p>Do this right, and you'll earn $3K to $10K per year on spending you're already doing. Do it wrong, and 24% APR will cost you far more than 2% cash back can ever earn.</p>
+
+<p>I've earned $47,000+ in credit card rewards over six years without paying a cent in interest. This system works if you're disciplined enough to follow it.</p>`,
+    category: "Money Management",
+    tags: ["credit cards", "cash back", "rewards", "travel rewards", "credit card points", "money hacks", "personal finance", "passive income"],
+    author: {
+      name: "Mint Money Guide Team",
+      bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
+    },
+    featuredImage: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    published: true,
+    featured: false,
+    views: 0,
+    readingTime: 12,
+    publishedAt: new Date('2025-11-29'),
+    updatedAt: new Date('2025-11-29')
+  }
