@@ -57,39 +57,13 @@
     </header>
 
     <img src="<%= post.featuredImage %>" alt="<%= post.title %>" class="w-full rounded-2xl shadow-2xl mb-12">
+  </article>
 
+  <div class="container mx-auto px-4 py-16 max-w-4xl">
     <div class="prose-custom">
       <%- post.content %>
     </div>
-
-    <div class="flex flex-wrap gap-2 mt-12 pb-8 border-b border-gray-200 dark:border-gray-700">
-      <% post.tags.forEach(tag => { %>
-        <span class="tag">#<%= tag %></span>
-      <% }) %>
-    </div>
-
-    <div class="card p-8 mt-12 flex items-center gap-6 border-2 border-primary/10">
-      <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
-        <span class="text-white font-bold text-3xl"><%= post.author.name.charAt(0) %></span>
-      </div>
-      <div>
-        <p class="text-sm text-muted font-semibold mb-1 uppercase tracking-wide">Written by</p>
-        <h3 class="font-bold text-2xl mb-3 text-dark-bg dark:text-white"><%= post.author.name %></h3>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed"><%= post.author.bio %></p>
-      </div>
-    </div>
-
-    <% if (relatedPosts.length > 0) { %>
-    <section class="mt-20">
-      <h2 class="text-3xl md:text-4xl font-black mb-12 text-center">Continue Reading</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <% relatedPosts.forEach(relatedPost => { %>
-          <%- include('../partials/post-card', { post: relatedPost }) %>
-        <% }) %>
-      </div>
-    </section>
-    <% } %>
-  </article>
+  </div>
 
   <%- include('../partials/footer') %>
   <button id="back-to-top" class="back-to-top"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg></button>
