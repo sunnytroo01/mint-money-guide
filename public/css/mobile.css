@@ -428,17 +428,25 @@
     font-size: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .prose-custom h3 {
     font-size: 1.25rem;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   .prose-custom p {
     margin-bottom: 1.25rem;
     line-height: 1.7;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .prose-custom ul, .prose-custom ol {
@@ -465,6 +473,29 @@
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+  }
+
+  /* Prevent all text overflow on mobile */
+  .prose-custom *, article *, .container * {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  /* Fix for tables on mobile */
+  .prose-custom table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+
+  /* Fix long URLs and links */
+  .prose-custom a {
+    word-break: break-all;
   }
 }
 
