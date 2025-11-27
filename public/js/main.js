@@ -9,10 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
       if (backToTop) backToTop.classList.add('show');
-      if (navbar) navbar.classList.add('blur-background', 'shadow-md');
     } else {
       if (backToTop) backToTop.classList.remove('show');
-      if (navbar) navbar.classList.remove('blur-background', 'shadow-md');
     }
   });
 
