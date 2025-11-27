@@ -1,232 +1,121 @@
-/* NUCLEAR FIX FOR MOBILE - NO HORIZONTAL SCROLL */
+/* SIMPLE MOBILE FIX - Like Privacy Policy */
 
-/* Force everything to stay within viewport */
-* {
-  box-sizing: border-box !important;
-  max-width: 100vw !important;
-}
-
-html {
-  overflow-x: hidden !important;
-  width: 100vw !important;
-  position: relative !important;
-}
-
-body {
-  overflow-x: hidden !important;
-  width: 100vw !important;
-  position: relative !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Mobile styles */
+/* Mobile only */
 @media (max-width: 768px) {
 
-  /* ABSOLUTE CONTAINMENT */
-  *, *::before, *::after {
-    box-sizing: border-box !important;
-    max-width: 100% !important;
+  /* Prevent horizontal scroll */
+  html,
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
-  /* Container overrides */
-  .container,
-  article,
-  section,
-  div,
-  header,
-  main,
-  footer {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    width: 100% !important;
+  /* Container - simple padding */
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
   }
 
-  /* Force padding on containers */
   article.container {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    width: 100% !important;
-    max-width: 100vw !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  /* Text elements - AGGRESSIVE word breaking */
-  h1, h2, h3, h4, h5, h6, p, span, a, div, li, td, th, label, button {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-    max-width: 100% !important;
-    hyphens: auto !important;
-    -webkit-hyphens: auto !important;
-    -ms-hyphens: auto !important;
+  /* All text wraps */
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
-  /* Headings - smaller sizes */
+  /* Headers - smaller and wrap */
   h1 {
-    font-size: 1.75rem !important;
-    line-height: 1.2 !important;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
 
   h2 {
-    font-size: 1.5rem !important;
-    line-height: 1.3 !important;
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
 
   h3 {
-    font-size: 1.25rem !important;
-    line-height: 1.4 !important;
+    font-size: 1.125rem;
+    line-height: 1.4;
   }
 
-  /* Article header */
-  article header h1 {
-    font-size: 1.75rem !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 0 1rem 0 !important;
+  /* Override Tailwind text sizes */
+  .text-4xl,
+  .text-5xl,
+  .text-6xl,
+  .text-7xl,
+  .md\:text-6xl {
+    font-size: 1.5rem !important;
+  }
+
+  .text-3xl {
+    font-size: 1.25rem !important;
+  }
+
+  .text-2xl {
+    font-size: 1.125rem !important;
   }
 
   /* Images */
   img {
-    max-width: 100% !important;
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
+    max-width: 100%;
+    height: auto;
   }
 
-  /* Tailwind overrides */
-  .text-4xl,
-  .text-5xl,
-  .text-6xl,
-  .text-7xl {
-    font-size: 1.75rem !important;
-  }
-
-  .md\:text-6xl {
-    font-size: 1.75rem !important;
-  }
-
-  /* Prose content */
-  .prose-custom,
-  .prose-custom * {
-    max-width: 100% !important;
-    width: 100% !important;
-    overflow-x: hidden !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-
-  .prose-custom p,
-  .prose-custom h1,
-  .prose-custom h2,
-  .prose-custom h3,
-  .prose-custom h4,
-  .prose-custom h5,
-  .prose-custom h6,
-  .prose-custom li,
-  .prose-custom td,
-  .prose-custom th {
-    max-width: 100% !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
-  }
-
-  /* Tables */
+  /* Tables scroll */
   table {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block !important;
-    overflow-x: auto !important;
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
   }
 
-  /* Pre and code */
+  /* Pre/code scroll */
   pre {
-    max-width: 100% !important;
-    overflow-x: auto !important;
-    white-space: pre-wrap !important;
-    word-wrap: break-word !important;
+    overflow-x: auto;
+    max-width: 100%;
   }
 
-  code {
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
+  /* Reduce spacing */
+  .py-24 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  /* Flex containers */
-  .flex {
-    flex-wrap: wrap !important;
-    max-width: 100% !important;
+  .py-20 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
 
-  /* Grid */
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Grid to single column */
   .grid {
-    grid-template-columns: 1fr !important;
-    max-width: 100% !important;
+    grid-template-columns: 1fr;
   }
 
-  /* Remove any negative margins */
-  * {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  /* Flex wraps */
+  .flex {
+    flex-wrap: wrap;
   }
 
-  /* Padding adjustments */
-  .px-4 {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-
-  /* Max width classes */
+  /* Max width to full width */
   .max-w-4xl,
   .max-w-3xl,
   .max-w-2xl,
   .max-w-xl {
-    max-width: 100% !important;
+    max-width: 100%;
   }
 
-  /* Navigation */
-  nav {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-  }
-
-  /* Cards */
-  .card {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  /* Author box */
+  /* Author card */
   .card.p-8 {
-    padding: 1rem !important;
-  }
-
-  /* Buttons */
-  button,
-  .btn {
-    max-width: 100% !important;
-    font-size: 1rem !important;
-  }
-
-  /* Links */
-  a {
-    word-break: break-word !important;
-    overflow-wrap: break-word !important;
-  }
-
-  /* Remove transforms that might cause overflow */
-  * {
-    transform: none !important;
-  }
-
-  /* Absolute positioned elements */
-  .absolute {
-    position: relative !important;
-  }
-
-  /* Fixed elements */
-  .fixed {
-    max-width: 100vw !important;
+    padding: 1.5rem;
   }
 }
