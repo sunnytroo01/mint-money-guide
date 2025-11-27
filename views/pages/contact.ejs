@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title><%= meta.title %></title>
+  <meta name="description" content="<%= meta.description %>">
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/mobile.css">
+</head>
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header', { title: 'About Mint Money Guide', subtitle: 'Your trusted resource for building wealth through smart financial strategies.' }) %>
+
+  <div class="container mx-auto px-4 py-12 max-w-4xl">
+    <!-- Mission Statement -->
+    <div class="card p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-4 text-primary">Our Mission</h2>
+      <p class="text-lg leading-relaxed mb-4">
+        Mint Money Guide is dedicated to helping you achieve financial freedom through proven wealth-building strategies,
+        practical money management tips, and actionable investment advice.
+      </p>
+      <p class="text-lg leading-relaxed">
+        We believe that building wealth isn't about getting lucky or inheriting money—it's about making smart decisions,
+        developing the right habits, and staying consistent over time. Our content is designed to give you the knowledge
+        and tools you need to take control of your financial future.
+      </p>
+    </div>
+
+    <!-- What We Cover -->
+    <div class="card p-8 mb-8">
+      <h2 class="text-3xl font-bold mb-6 text-primary">What We Cover</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-secondary"><i class="fas fa-wallet mr-2"></i> Money Management</h3>
+          <p class="text-muted">Budgeting strategies, savings tactics, and expense optimization techniques that actually work.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-secondary"><i class="fas fa-chart-line mr-2"></i> Investing</h3>
+          <p class="text-muted">Stock market insights, real estate investing, index funds, and building passive income streams.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-secondary"><i class="fas fa-bullseye mr-2"></i> Financial Independence</h3>
+          <p class="text-muted">Strategies for achieving FIRE (Financial Independence, Retire Early) and living life on your terms.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2 text-secondary"><i class="fas fa-brain mr-2"></i> Money Psychology</h3>
+          <p class="text-muted">Understanding behavioral finance, overcoming cognitive biases, and building a wealth mindset.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+  "name": "wealthprompter-blog",
+  "version": "1.0.0",
+  "description": "Production-ready SEO-optimized blog for Mint Money Guide.com",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --minify",
+    "build:dev": "tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch",
+    "seed": "node data/seed-posts.js"
+  },
+  "keywords": [
+    "blog",
+    "wealth",
+    "finance",
+    "seo",
+    "railway"
+  ],
+  "author": "Mint Money Guide",
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "express-session": "^1.17.3",
+    "helmet": "^7.1.0",
+    "marked": "^11.1.1",
+    "mongodb-memory-server": "^10.3.0",
+    "mongoose": "^8.0.3",
+    "nodemailer": "^7.0.11",
+    "rss": "^1.2.2",
+    "sitemap": "^7.1.1",
+    "slugify": "^1.6.6",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11",
+    "tailwindcss": "^3.4.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

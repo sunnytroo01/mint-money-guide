@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= action === 'create' ? 'Create Post' : 'Edit Post' %> | Admin</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <nav class="bg-dark-bg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mint Money Guide Admin</h1>
+      <div class="flex gap-4">
+        <a href="/admin/posts" class="hover:text-secondary">Back to Posts</a>
+        <a href="/admin/logout" class="hover:text-secondary">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8 max-w-4xl">
+    <h2 class="text-3xl font-bold mb-8"><%= action === 'create' ? 'Create New Post' : 'Edit Post' %></h2>
+
+    <form method="POST" action="<%= action === 'create' ? '/admin/posts/create' : `/admin/posts/edit/${post._id}` %>" class="space-y-6">
+      <div>
+        <label for="title" class="block text-sm font-semibold mb-2">Title</label>
+        <input type="text" id="title" name="title" required value="<%= post ? post.title : '' %>" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+      </div>
+
+      <div>
+        <label for="excerpt" class="block text-sm font-semibold mb-2">Excerpt</label>
+        <textarea id="excerpt" name="excerpt" required rows="3" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600"><%= post ? post.excerpt : '' %></textarea>
+      </div>
+
+      <div>
+        <label for="content" class="block text-sm font-semibold mb-2">Content (HTML)</label>
+        <textarea id="content" name="content" required rows="20" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600 font-mono text-sm"><%= post ? post.content : '' %></textarea>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label for="category" class="block text-sm font-semibold mb-2">Category</label>
+          <select id="category" name="category" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+            <option value="Investing" <%= post && post.category === 'Investing' ? 'selected' : '' %>>Investing</option>
+            <option value="Passive Income" <%= post && post.category === 'Passive Income' ? 'selected' : '' %>>Passive Income</option>
+            <option value="Real Estate" <%= post && post.category === 'Real Estate' ? 'selected' : '' %>>Real Estate</option>
+            <option value="Cryptocurrency" <%= post && post.category === 'Cryptocurrency' ? 'selected' : '' %>>Cryptocurrency</option>
+            <option value="Tax Strategies" <%= post && post.category === 'Tax Strategies' ? 'selected' : '' %>>Tax Strategies</option>
+            <option value="Retirement" <%= post && post.category === 'Retirement' ? 'selected' : '' %>>Retirement</option>
+            <option value="Side Hustles" <%= post && post.category === 'Side Hustles' ? 'selected' : '' %>>Side Hustles</option>
+            <option value="Money Mindset" <%= post && post.category === 'Money Mindset' ? 'selected' : '' %>>Money Mindset</option>
+            <option value="Wealth Building" <%= post && post.category === 'Wealth Building' ? 'selected' : '' %>>Wealth Building</option>
+            <option value="Estate Planning" <%= post && post.category === 'Estate Planning' ? 'selected' : '' %>>Estate Planning</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="featuredImage" class="block text-sm font-semibold mb-2">Featured Image URL</label>
+          <input type="text" id="featuredImage" name="featuredImage" required value="<%= post ? post.featuredImage : '/images/default-post.jpg' %>" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+        </div>
+      </div>
+
+      <div>
+        <label for="tags" class="block text-sm font-semibold mb-2">Tags (comma-separated)</label>
+        <input type="text" id="tags" name="tags" value="<%= post && post.tags ? post.tags.join(', ') : '' %>" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+      </div>
+
+      <div>
+        <label for="keywords" class="block text-sm font-semibold mb-2">SEO Keywords</label>
+        <input type="text" id="keywords" name="keywords" required value="<%= post ? post.keywords : '' %>" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+      </div>
+
+      <div>
+        <label for="metaDescription" class="block text-sm font-semibold mb-2">Meta Description</label>
+        <textarea id="metaDescription" name="metaDescription" required rows="2" maxlength="160" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600"><%= post ? post.metaDescription : '' %></textarea>
+        <p class="text-sm text-muted mt-1">Max 160 characters for SEO</p>
+      </div>
+
+      <div class="flex items-center">
+        <input type="checkbox" id="published" name="published" <%= post && post.published ? 'checked' : '' %> class="w-4 h-4 mr-2">
+        <label for="published" class="text-sm font-semibold">Published</label>
+      </div>
+
+      <div class="flex gap-4">
+        <button type="submit" class="btn-primary"><%= action === 'create' ? 'Create Post' : 'Update Post' %></button>
+        <a href="/admin/posts" class="btn-outline">Cancel</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

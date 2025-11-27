@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="<%= typeof darkMode !== 'undefined' && darkMode ? 'dark' : '' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=yes, email=yes, address=yes">
+
+  <!-- Primary Meta Tags -->
+  <title><%= meta.title %></title>
+  <meta name="title" content="<%= meta.title %>">
+  <meta name="description" content="<%= meta.description %>">
+  <meta name="keywords" content="<%= meta.keywords %>">
+  <meta name="author" content="Mint Money Guide">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="<%= meta.canonical %>">
+
+  <!-- Language and Locale -->
+  <meta name="language" content="English">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="<%= meta.type %>">
+  <meta property="og:url" content="<%= meta.fullUrl %>">
+  <meta property="og:title" content="<%= meta.title %>">
+  <meta property="og:description" content="<%= meta.description %>">
+  <meta property="og:image" content="<%= meta.imageUrl %>">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="<%= meta.siteName %>">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="<%= meta.twitterCard %>">
+  <meta name="twitter:url" content="<%= meta.fullUrl %>">
+  <meta name="twitter:title" content="<%= meta.title %>">
+  <meta name="twitter:description" content="<%= meta.description %>">
+  <meta name="twitter:image" content="<%= meta.imageUrl %>">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2C5F4F">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Mint Money Guide">
+  <meta name="application-name" content="Mint Money Guide">
+  <meta name="format-detection" content="telephone=no">
+
+  <% if (typeof schema !== 'undefined' && schema) { %>
+    <% if (schema.post) { %>
+      <script type="application/ld+json"><%- JSON.stringify(schema.post) %></script>
+    <% } %>
+    <% if (schema.breadcrumb) { %>
+      <script type="application/ld+json"><%- JSON.stringify(schema.breadcrumb) %></script>
+    <% } %>
+    <% if (typeof schema === 'object' && !schema.post && !schema.breadcrumb) { %>
+      <script type="application/ld+json"><%- JSON.stringify(schema) %></script>
+    <% } %>
+  <% } %>
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/css/output.css">
+  <link rel="stylesheet" href="/css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="alternate" type="application/rss+xml" title="Mint Money Guide RSS Feed" href="/rss.xml">
+</head>
+<body class="min-h-screen flex flex-col">
+  <%- include('../partials/nav') %>
+
+  <main class="flex-grow">
+    <%- body %>
+  </main>
+
+  <%- include('../partials/footer') %>
+
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-dark-bg text-white p-4 shadow-lg z-50 hidden">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+      <button id="accept-cookies" class="btn-primary text-sm">Accept</button>
+    </div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

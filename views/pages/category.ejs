@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= meta.title %></title>
+  <meta name="description" content="<%= meta.description %>">
+  <link rel="canonical" href="<%= meta.canonical %>">
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header', { title: category, subtitle: `Expert articles on ${category.toLowerCase()}` }) %>
+
+  <div class="container mx-auto px-4 py-12">
+    <% if (posts.length > 0) { %>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <% posts.forEach(post => { %>
+          <%- include('../partials/post-card', { post }) %>
+        <% }) %>
+      </div>
+
+      <% if (totalPages > 1) { %>
+        <div class="flex justify-center items-center gap-4 mt-12">
+          <% if (currentPage > 1) { %>
+            <a href="?page=<%= currentPage - 1 %>" class="btn-outline">Previous</a>
+          <% } %>
+          <span class="text-muted">Page <%= currentPage %> of <%= totalPages %></span>
+          <% if (currentPage < totalPages) { %>
+            <a href="?page=<%= currentPage + 1 %>" class="btn-primary">Next</a>
+          <% } %>
+        </div>
+      <% } %>
+    <% } else { %>
+      <div class="text-center py-16">
+        <p class="text-xl text-muted">No articles found in this category.</p>
+      </div>
+    <% } %>
+  </div>
+
+  <%- include('../partials/footer') %>
+  <script src="/js/main.js"></script>
+  <script src="/js/darkmode.js"></script>
+</body>
+</html>

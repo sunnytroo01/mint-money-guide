@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Messages | Admin</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <nav class="bg-dark-bg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mint Money Guide Admin</h1>
+      <div class="flex gap-4">
+        <a href="/admin/dashboard" class="hover:text-secondary">Dashboard</a>
+        <a href="/admin/logout" class="hover:text-secondary">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-8">Contact Messages (<%= contacts.length %>)</h2>
+
+    <div class="space-y-4">
+      <% contacts.forEach(contact => { %>
+        <div class="card p-6">
+          <div class="flex justify-between items-start mb-4">
+            <div>
+              <h3 class="font-bold text-lg"><%= contact.subject %></h3>
+              <p class="text-sm text-muted">From: <%= contact.name %> (<%= contact.email %>)</p>
+            </div>
+            <span class="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-800">
+              <%= contact.status %>
+            </span>
+          </div>
+          <p class="text-gray-700 dark:text-gray-300 mb-4"><%= contact.message %></p>
+          <p class="text-sm text-muted"><%= new Date(contact.createdAt).toLocaleString() %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

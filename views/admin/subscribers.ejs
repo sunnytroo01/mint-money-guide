@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribers | Admin</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <nav class="bg-dark-bg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mint Money Guide Admin</h1>
+      <div class="flex gap-4">
+        <a href="/admin/dashboard" class="hover:text-secondary">Dashboard</a>
+        <a href="/admin/logout" class="hover:text-secondary">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-8">Subscribers (<%= subscribers.length %>)</h2>
+
+    <div class="card overflow-hidden">
+      <table class="w-full">
+        <thead class="bg-gray-100 dark:bg-gray-800">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Email</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Name</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Source</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Status</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Subscribed Date</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y">
+          <% subscribers.forEach(sub => { %>
+            <tr>
+              <td class="px-6 py-4"><%= sub.email %></td>
+              <td class="px-6 py-4"><%= sub.name || '-' %></td>
+              <td class="px-6 py-4"><%= sub.source %></td>
+              <td class="px-6 py-4">
+                <span class="px-2 py-1 text-xs rounded-full <%= sub.active ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800' %>">
+                  <%= sub.active ? 'Active' : 'Unsubscribed' %>
+                </span>
+              </td>
+              <td class="px-6 py-4"><%= new Date(sub.subscribedAt).toLocaleDateString() %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

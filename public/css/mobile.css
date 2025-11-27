@@ -1,0 +1,563 @@
+/* ===== COMPREHENSIVE MOBILE OPTIMIZATION ===== */
+
+/* Base Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Better touch targets - Apple HIG standard */
+  button, a, input, textarea, select, .clickable {
+    min-height: 44px;
+    -webkit-tap-highlight-color: rgba(44, 95, 79, 0.2);
+  }
+
+  /* Disable hover effects on touch devices */
+  * {
+    -webkit-touch-callout: none;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Typography - Mobile Optimized */
+@media (max-width: 768px) {
+  /* Hero text */
+  h1.text-5xl, h1.text-7xl {
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Section headings */
+  h2.text-4xl, h2.text-5xl {
+    font-size: 1.875rem !important;
+    line-height: 1.3 !important;
+  }
+
+  h3.text-3xl, h3.text-4xl {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Paragraph text - optimal mobile reading */
+  p, li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Article content */
+  article h1 {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  article h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  article h3 {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+}
+
+/* Layout - Mobile Spacing */
+@media (max-width: 768px) {
+  /* Container padding */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Reduce excessive vertical spacing */
+  section.py-24, .py-24 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  section.py-20, .py-20 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  section.py-16, .py-16 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Margins */
+  .mb-24 {
+    margin-bottom: 3rem !important;
+  }
+
+  .mb-20 {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .mb-12 {
+    margin-bottom: 2rem !important;
+  }
+
+  .mb-8 {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Navigation - Mobile Optimized */
+@media (max-width: 768px) {
+  nav .container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #mobile-menu a {
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  #mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  #mobile-menu-toggle {
+    padding: 0.75rem;
+  }
+}
+
+/* Buttons - Mobile Optimized */
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary, .btn-outline {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .btn-group .btn-primary,
+  .btn-group .btn-secondary,
+  .btn-group .btn-outline {
+    width: 100%;
+  }
+}
+
+/* Cards - Mobile Optimized */
+@media (max-width: 768px) {
+  .post-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-card img {
+    height: 14rem;
+    object-fit: cover;
+  }
+
+  .post-card .p-6 {
+    padding: 1.25rem;
+  }
+
+  .post-card h3 {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+
+  .card {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0.75rem;
+  }
+}
+
+/* Grid Layouts - Mobile Stack */
+@media (max-width: 768px) {
+  .grid-cols-1.md\:grid-cols-2,
+  .grid-cols-1.md\:grid-cols-3,
+  .grid-cols-1.lg\:grid-cols-3 {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+}
+
+/* Images - Mobile Optimized */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  article img {
+    border-radius: 0.75rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post-card-image {
+    height: 14rem;
+  }
+}
+
+/* Footer - Mobile Optimized */
+@media (max-width: 768px) {
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  footer .grid {
+    gap: 2rem;
+  }
+
+  footer h3 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+
+  footer ul li {
+    padding: 0.5rem 0;
+  }
+
+  footer .flex.md\:flex-row {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* Forms - Mobile Optimized */
+@media (max-width: 768px) {
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents iOS zoom */
+    padding: 0.875rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  textarea {
+    min-height: 150px;
+  }
+}
+
+/* Author Bio - Mobile */
+@media (max-width: 768px) {
+  .card.p-8 {
+    padding: 1.25rem !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card .w-24 {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+
+  .card .text-3xl {
+    font-size: 1.875rem !important;
+  }
+}
+
+/* Tags - Mobile */
+@media (max-width: 768px) {
+  .tag {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .flex.flex-wrap.gap-2 {
+    gap: 0.5rem;
+  }
+}
+
+/* Breadcrumbs - Mobile */
+@media (max-width: 768px) {
+  nav.text-sm {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Back to Top Button - Mobile */
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .back-to-top svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Cookie Consent - Mobile */
+@media (max-width: 768px) {
+  #cookie-consent {
+    padding: 1rem;
+  }
+
+  #cookie-consent .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #cookie-consent p {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  #cookie-consent button {
+    width: 100%;
+  }
+}
+
+/* Reading Progress - Mobile */
+@media (max-width: 768px) {
+  .reading-progress {
+    height: 3px;
+  }
+}
+
+/* Related Posts - Mobile */
+@media (max-width: 768px) {
+  section.mt-20 {
+    margin-top: 3rem !important;
+  }
+
+  section.mt-20 h2 {
+    font-size: 1.75rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+
+/* Graphics - Mobile Optimized */
+@media (max-width: 768px) {
+  .blog-graphic {
+    padding: 1.25rem !important;
+    margin: 2rem auto !important;
+  }
+
+  .compound-visual {
+    height: 280px !important;
+    padding: 1rem !important;
+  }
+
+  .year-block {
+    width: 70px !important;
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.25rem !important;
+  }
+
+  .streams-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .income-stream {
+    padding: 1rem !important;
+  }
+
+  .stream-icon {
+    font-size: 2rem !important;
+  }
+
+  .stream-amount {
+    font-size: 1.125rem !important;
+  }
+
+  .total-income {
+    padding: 1rem 1.5rem !important;
+    font-size: 1.125rem !important;
+  }
+
+  .timeline-path {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .milestone-icon {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 1.5rem !important;
+  }
+
+  .milestone-amount {
+    font-size: 1.125rem !important;
+  }
+
+  .chart-title, .compound-title, .streams-title,
+  .pie-title, .timeline-title, .risk-title, .dca-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+/* Prose Content - Mobile Optimized */
+@media (max-width: 768px) {
+  .prose-custom {
+    font-size: 1rem;
+  }
+
+  .prose-custom h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose-custom h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose-custom p {
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+  }
+
+  .prose-custom ul, .prose-custom ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose-custom li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-custom blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+  }
+
+  .prose-custom code {
+    font-size: 0.875rem;
+    padding: 0.125rem 0.375rem;
+  }
+
+  .prose-custom pre {
+    margin: 1.5rem -1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+  }
+}
+
+/* Small Mobile Devices (< 375px) */
+@media (max-width: 374px) {
+  .container {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+
+  h1.text-5xl, h1.text-7xl {
+    font-size: 2rem !important;
+  }
+
+  .btn-primary, .btn-secondary, .btn-outline {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .post-card img {
+    height: 12rem;
+  }
+
+  .streams-container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  section.py-20 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .hero-gradient {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* Performance Optimizations */
+@media (max-width: 768px) {
+  /* Reduce animations on mobile for better performance */
+  * {
+    animation-duration: 0.3s !important;
+  }
+
+  /* Optimize transforms */
+  .transform {
+    will-change: transform;
+  }
+
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+/* Mobile Menu Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scroll behavior */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 768px) {
+    /* Fix for iOS Safari bottom bar */
+    body {
+      min-height: -webkit-fill-available;
+    }
+
+    /* Fix for sticky elements on iOS */
+    .sticky {
+      position: -webkit-sticky;
+      position: sticky;
+    }
+  }
+}

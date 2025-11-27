@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= meta.title %></title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header', { title: `Search Results for "${query}"`, subtitle: `Found ${posts.length} ${posts.length === 1 ? 'article' : 'articles'}` }) %>
+
+  <div class="container mx-auto px-4 py-12">
+    <% if (posts.length > 0) { %>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <% posts.forEach(post => { %>
+          <%- include('../partials/post-card', { post }) %>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <div class="text-center py-16">
+        <p class="text-xl text-muted mb-4">No articles found matching your search.</p>
+        <a href="/blog" class="btn-primary">Browse All Articles</a>
+      </div>
+    <% } %>
+  </div>
+
+  <%- include('../partials/footer') %>
+  <script src="/js/main.js"></script>
+  <script src="/js/darkmode.js"></script>
+</body>
+</html>

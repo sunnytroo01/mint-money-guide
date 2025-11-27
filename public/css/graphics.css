@@ -1,0 +1,303 @@
+/* Ultra-Smooth Professional Animated Graphics - 180Hz Ready */
+/* Brand Color: #2C5F4F - NO GRADIENTS */
+
+.blog-graphic {
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 2.5rem;
+  background: #FFFFFF;
+  border: 2px solid #2C5F4F;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(44, 95, 79, 0.12);
+  overflow: hidden;
+  will-change: transform;
+}
+
+.dark .blog-graphic {
+  background: #2A2A2A;
+}
+
+.chart-title, .compound-title, .streams-title,
+.pie-title, .timeline-title, .risk-title, .dca-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2C5F4F;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* COMPOUND INTEREST ANIMATION */
+.graphic-compound-interest {
+  text-align: center;
+}
+
+.compound-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 380px;
+  padding: 2rem;
+  background: #FAF8F5;
+  border-radius: 8px;
+}
+
+.year-stack {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.year-block {
+  width: 110px;
+  height: var(--height);
+  background: #2C5F4F;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  box-shadow: 0 4px 12px rgba(44, 95, 79, 0.25);
+  will-change: transform, opacity;
+  animation: smoothRise 1.2s var(--delay) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transform: translateY(120%) translateZ(0);
+  opacity: 0;
+}
+
+@keyframes smoothRise {
+  to {
+    transform: translateY(0) translateZ(0);
+    opacity: 1;
+  }
+}
+
+/* INCOME STREAMS */
+.streams-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.income-stream {
+  background: #FAF8F5;
+  border: 2px solid #2C5F4F;
+  border-radius: 10px;
+  padding: 1.75rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  will-change: transform, opacity;
+  animation: smoothSlideIn 0.8s var(--delay) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px) translateZ(0);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backface-visibility: hidden;
+}
+
+.income-stream:hover {
+  transform: translateY(-6px) translateZ(0);
+}
+
+.stream-icon {
+  font-size: 2.5rem;
+  color: #2C5F4F;
+  margin-bottom: 0.75rem;
+}
+
+.stream-amount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1A1A1A;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.total-income {
+  background: #2C5F4F;
+  color: white;
+  padding: 1.25rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(44, 95, 79, 0.3);
+}
+
+@keyframes smoothSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+/* WEALTH TIMELINE */
+.timeline-path {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+  background: #FAF8F5;
+  border-radius: 8px;
+}
+
+.timeline-milestone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  will-change: transform, opacity;
+  animation: smoothPop 1s var(--delay) cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: scale(0.5) translateZ(0);
+  backface-visibility: hidden;
+}
+
+.milestone-icon {
+  font-size: 2rem;
+  color: white;
+  background: #2C5F4F;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(44, 95, 79, 0.3);
+  border: 4px solid white;
+}
+
+.milestone-amount {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2C5F4F;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+@keyframes smoothPop {
+  to {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+}
+
+/* Responsive - Mobile Optimized */
+@media (max-width: 768px) {
+  .blog-graphic {
+    padding: 1.25rem;
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+
+  .chart-title, .compound-title, .streams-title,
+  .pie-title, .timeline-title, .risk-title, .dca-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Compound Interest */
+  .compound-visual {
+    height: 280px;
+    padding: 1rem;
+  }
+
+  .year-stack {
+    gap: 0.5rem;
+  }
+
+  .year-block {
+    width: 70px;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.25rem;
+    line-height: 1.3;
+  }
+
+  .compound-note {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+  }
+
+  /* Income Streams */
+  .streams-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .income-stream {
+    padding: 1rem;
+  }
+
+  .stream-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stream-name {
+    font-size: 0.875rem;
+  }
+
+  .stream-amount {
+    font-size: 1.125rem;
+  }
+
+  .total-income {
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+  }
+
+  /* Timeline */
+  .timeline-path {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .milestone-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .milestone-amount {
+    font-size: 1.125rem;
+    margin-top: 0.75rem;
+  }
+
+  .milestone-title {
+    font-size: 0.875rem;
+  }
+
+  .milestone-year {
+    font-size: 0.875rem;
+  }
+
+  .milestone-connector {
+    display: none;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 374px) {
+  .blog-graphic {
+    padding: 1rem;
+  }
+
+  .streams-container {
+    grid-template-columns: 1fr;
+  }
+
+  .year-block {
+    width: 60px;
+    font-size: 0.7rem;
+  }
+
+  .chart-title, .compound-title, .streams-title,
+  .pie-title, .timeline-title, .risk-title, .dca-title {
+    font-size: 1.125rem;
+  }
+}

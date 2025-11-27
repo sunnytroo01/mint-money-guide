@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Posts | Admin</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <nav class="bg-dark-bg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mint Money Guide Admin</h1>
+      <div class="flex gap-4">
+        <a href="/admin/dashboard" class="hover:text-secondary">Dashboard</a>
+        <a href="/" class="hover:text-secondary">View Site</a>
+        <a href="/admin/logout" class="hover:text-secondary">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex justify-between items-center mb-8">
+      <h2 class="text-3xl font-bold">Manage Posts</h2>
+      <a href="/admin/posts/create" class="btn-primary">Create New Post</a>
+    </div>
+
+    <div class="card overflow-hidden">
+      <table class="w-full">
+        <thead class="bg-gray-100 dark:bg-gray-800">
+          <tr>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Title</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Category</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Status</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Views</th>
+            <th class="px-6 py-3 text-left text-sm font-semibold">Date</th>
+            <th class="px-6 py-3 text-right text-sm font-semibold">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y">
+          <% posts.forEach(post => { %>
+            <tr>
+              <td class="px-6 py-4"><%= post.title %></td>
+              <td class="px-6 py-4"><%= post.category %></td>
+              <td class="px-6 py-4">
+                <span class="px-2 py-1 text-xs rounded-full <%= post.published ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' %>">
+                  <%= post.published ? 'Published' : 'Draft' %>
+                </span>
+              </td>
+              <td class="px-6 py-4"><%= post.views %></td>
+              <td class="px-6 py-4"><%= new Date(post.createdAt).toLocaleDateString() %></td>
+              <td class="px-6 py-4 text-right space-x-2">
+                <a href="/blog/<%= post.slug %>" target="_blank" class="text-primary hover:underline">View</a>
+                <a href="/admin/posts/edit/<%= post._id %>" class="text-accent hover:underline">Edit</a>
+                <form method="POST" action="/admin/posts/delete/<%= post._id %>" class="inline" onsubmit="return confirm('Are you sure?')">
+                  <button type="submit" class="text-red-600 hover:underline">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

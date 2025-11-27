@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= meta.title %></title>
+  <meta name="description" content="<%= meta.description %>">
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <%- include('../partials/nav') %>
+  <%- include('../partials/header', { title: 'Subscribe', subtitle: 'Get expert financial insights delivered to your inbox weekly' }) %>
+
+  <div class="container mx-auto px-4 py-12 max-w-2xl">
+    <div class="card p-8">
+      <h2 class="text-2xl font-bold mb-4">Join Thousands of Wealth Builders</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-6">Subscribe to receive:</p>
+      <ul class="space-y-3 mb-8">
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span>Weekly wealth-building strategies and tips</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span>Exclusive content and early access to articles</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span>Market insights and investment opportunities</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span>Free downloadable resources and guides</span>
+        </li>
+      </ul>
+
+      <form id="subscribe-form" class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-semibold mb-2">Name (Optional)</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-semibold mb-2">Email Address</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:border-primary focus:outline-none dark:bg-dark-card dark:border-gray-600">
+        </div>
+
+        <button type="submit" class="btn-primary w-full">Subscribe Now</button>
+      </form>
+
+      <div id="form-message" class="mt-4 hidden"></div>
+    </div>
+  </div>
+
+  <%- include('../partials/footer') %>
+
+  <script>
+    document.getElementById('subscribe-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      data.source = 'subscribe-page';
+
+      try {
+        const response = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        const messageDiv = document.getElementById('form-message');
+        messageDiv.classList.remove('hidden');
+
+        if (result.success) {
+          messageDiv.className = 'mt-4 p-4 bg-green-100 text-green-800 rounded-lg';
+          messageDiv.textContent = result.message;
+          form.reset();
+        } else {
+          messageDiv.className = 'mt-4 p-4 bg-red-100 text-red-800 rounded-lg';
+          messageDiv.textContent = result.message;
+        }
+      } catch (error) {
+        const messageDiv = document.getElementById('form-message');
+        messageDiv.classList.remove('hidden');
+        messageDiv.className = 'mt-4 p-4 bg-red-100 text-red-800 rounded-lg';
+        messageDiv.textContent = 'An error occurred. Please try again later.';
+      }
+    });
+  </script>
+  <script src="/js/main.js"></script>
+  <script src="/js/darkmode.js"></script>
+</body>
+</html>

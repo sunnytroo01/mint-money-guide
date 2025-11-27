@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Admin</title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+<body>
+  <nav class="bg-dark-bg text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Mint Money Guide Admin</h1>
+      <div class="flex gap-4">
+        <a href="/" class="hover:text-secondary">View Site</a>
+        <a href="/admin/logout" class="hover:text-secondary">Logout</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto px-4 py-8">
+    <h2 class="text-3xl font-bold mb-8">Dashboard</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+      <div class="card p-6">
+        <h3 class="text-muted text-sm mb-2">Total Posts</h3>
+        <p class="text-4xl font-bold"><%= stats.postsCount %></p>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-muted text-sm mb-2">Published</h3>
+        <p class="text-4xl font-bold text-accent"><%= stats.publishedCount %></p>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-muted text-sm mb-2">Subscribers</h3>
+        <p class="text-4xl font-bold text-secondary"><%= stats.subscribersCount %></p>
+      </div>
+      <div class="card p-6">
+        <h3 class="text-muted text-sm mb-2">New Contacts</h3>
+        <p class="text-4xl font-bold text-primary"><%= stats.contactsCount %></p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="card p-6">
+        <h3 class="text-2xl font-bold mb-4">Quick Actions</h3>
+        <div class="space-y-3">
+          <a href="/admin/posts/create" class="block btn-primary text-center">Create New Post</a>
+          <a href="/admin/posts" class="block btn-secondary text-center">Manage Posts</a>
+          <a href="/admin/subscribers" class="block btn-outline text-center">View Subscribers</a>
+          <a href="/admin/contacts" class="block btn-outline text-center">View Contacts</a>
+        </div>
+      </div>
+
+      <div class="card p-6">
+        <h3 class="text-2xl font-bold mb-4">Recent Posts</h3>
+        <div class="space-y-3">
+          <% recentPosts.forEach(post => { %>
+            <div class="flex justify-between items-center py-2 border-b">
+              <div class="flex-1 mr-4">
+                <p class="font-semibold line-clamp-1"><%= post.title %></p>
+                <p class="text-sm text-muted"><%= post.category %> - <%= post.published ? 'Published' : 'Draft' %></p>
+              </div>
+              <a href="/admin/posts/edit/<%= post._id %>" class="text-sm text-primary hover:underline">Edit</a>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
