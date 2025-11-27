@@ -16,90 +16,21 @@
   <script type="application/ld+json"><%- JSON.stringify(schema.post) %></script>
   <script type="application/ld+json"><%- JSON.stringify(schema.breadcrumb) %></script>
   <link rel="stylesheet" href="/css/output.css">
-  <link rel="stylesheet" href="/css/graphics.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 <body>
-  <div id="reading-progress" class="reading-progress" style="width: 0%"></div>
   <%- include('../partials/nav') %>
 
-  <article class="container mx-auto px-4 py-16 max-w-4xl" data-post-id="<%= post._id %>">
-    <nav class="text-sm text-muted mb-8 font-medium">
-      <% breadcrumbs.forEach((crumb, index) => { %>
-        <% if (index > 0) { %> <span class="mx-2">/</span> <% } %>
-        <% if (index < breadcrumbs.length - 1) { %>
-          <a href="<%= crumb.url %>" class="hover:text-primary transition-colors"><%= crumb.name %></a>
-        <% } else { %>
-          <span><%= crumb.name %></span>
-        <% } %>
-      <% }) %>
-    </nav>
-
-    <header class="mb-12">
-      <div class="flex items-center gap-4 mb-6">
-        <span class="category-badge text-sm"><%= post.category %></span>
-        <span class="text-sm text-muted font-medium"><%= post.readingTime %> min read</span>
-      </div>
-
-      <h1 class="text-4xl md:text-6xl font-black mb-8 text-balance leading-tight"><%= post.title %></h1>
-
-      <div class="flex items-center gap-6 text-sm text-muted">
-        <span>By <%= post.author.name %></span>
-        <span><%= new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></span>
-        <span class="flex items-center">
-          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-          </svg>
-          <span class="view-count"><%= post.views %></span>
-        </span>
-      </div>
-    </header>
-
-    <img src="<%= post.featuredImage %>" alt="<%= post.title %>" class="w-full rounded-2xl shadow-2xl mb-12">
-  </article>
-
   <div class="container mx-auto px-4 py-16 max-w-4xl">
+    <h1 class="text-5xl font-black mb-6"><%= post.title %></h1>
+    <p class="text-gray-600 dark:text-gray-400 mb-8">By <%= post.author.name %> • <%= new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></p>
+
     <div class="prose-custom">
       <%- post.content %>
     </div>
   </div>
 
   <%- include('../partials/footer') %>
-  <button id="back-to-top" class="back-to-top"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg></button>
-
-  <script>
-    // Reading progress
-    window.addEventListener('scroll', () => {
-      const article = document.querySelector('article');
-      const scrolled = window.scrollY;
-      const height = article.offsetHeight - window.innerHeight;
-      const progress = (scrolled / height) * 100;
-      document.getElementById('reading-progress').style.width = Math.min(progress, 100) + '%';
-    });
-
-    // Prevent Google Lens context menu on images
-    document.addEventListener('contextmenu', function(event) {
-      if (event.target.tagName === 'IMG') {
-        event.preventDefault();
-      }
-    });
-
-    // Prevent double-tap zoom
-    let lastTouchEnd = 0;
-    document.addEventListener('touchend', function(event) {
-      const now = Date.now();
-      if (now - lastTouchEnd <= 300) {
-        event.preventDefault();
-      }
-      lastTouchEnd = now;
-    }, false);
-  </script>
-  <script src="/js/graphics.js"></script>
-  <script src="/js/widow-preventer.js"></script>
-  <script src="/js/view-tracker.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/darkmode.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </body>
 </html>
