@@ -12,7 +12,7 @@
   <%- include('../partials/nav') %>
   <%- include('../partials/header', { title: category, subtitle: `Expert articles on ${category.toLowerCase()}` }) %>
 
-  <div class="container mx-auto px-4 py-12">
+  <div class="container mx-auto px-4 pt-24 pb-12">
     <% if (posts.length > 0) { %>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <% posts.forEach(post => { %>

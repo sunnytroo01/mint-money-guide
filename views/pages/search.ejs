@@ -10,7 +10,7 @@
   <%- include('../partials/nav') %>
   <%- include('../partials/header', { title: `Search Results for "${query}"`, subtitle: `Found ${posts.length} ${posts.length === 1 ? 'article' : 'articles'}` }) %>
 
-  <div class="container mx-auto px-4 py-12">
+  <div class="container mx-auto px-4 pt-24 pb-12">
     <% if (posts.length > 0) { %>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <% posts.forEach(post => { %>
