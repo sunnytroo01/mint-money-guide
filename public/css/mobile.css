@@ -514,6 +514,10 @@
     border-radius: 1rem !important;
     width: 100%;
     max-width: 100%;
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
   }
 
   /* Content spacing - mobile - match header width */
@@ -565,6 +569,15 @@
     overflow-wrap: break-word;
     hyphens: auto;
     max-width: 100%;
+  }
+
+  /* Disable Google Lens on all images */
+  article img,
+  .prose-custom img {
+    pointer-events: none !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
   }
 
   /* Author box - mobile friendly */
