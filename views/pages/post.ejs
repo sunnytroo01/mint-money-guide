@@ -135,69 +135,52 @@
 
   <%- include('../partials/footer') %>
   <script>
-    // Copy link to clipboard function with fallback
+    // Copy link to clipboard - reliable cross-browser method
     function copyToClipboard() {
       const url = '<%= meta.fullUrl %>';
       const button = document.getElementById('copyLinkBtn');
       const text = document.getElementById('copyLinkText');
 
-      // Try modern clipboard API first
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url)
-          .then(() => {
-            showCopiedFeedback();
-          })
-          .catch((err) => {
-            console.error('Clipboard API failed:', err);
-            fallbackCopy(url);
-          });
-      } else {
-        // Use fallback method
-        fallbackCopy(url);
-      }
+      // Create temporary input element
+      const tempInput = document.createElement('input');
+      tempInput.style.position = 'absolute';
+      tempInput.style.left = '-1000px';
+      tempInput.style.top = '-1000px';
+      tempInput.value = url;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); // For mobile devices
 
-      function fallbackCopy(text) {
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        textArea.style.top = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
+      try {
+        const successful = document.execCommand('copy');
+        document.body.removeChild(tempInput);
 
-        try {
-          const successful = document.execCommand('copy');
-          if (successful) {
-            showCopiedFeedback();
-          } else {
-            showFailedFeedback();
-          }
-        } catch (err) {
-          console.error('Fallback copy failed:', err);
-          showFailedFeedback();
+        if (successful) {
+          // Show success feedback
+          text.textContent = 'Copied!';
+          button.classList.remove('bg-primary', 'hover:bg-primary/90');
+          button.classList.add('bg-green-600', 'hover:bg-green-700');
+
+          setTimeout(() => {
+            text.textContent = 'Copy Link';
+            button.classList.remove('bg-green-600', 'hover:bg-green-700');
+            button.classList.add('bg-primary', 'hover:bg-primary/90');
+          }, 2000);
+        } else {
+          throw new Error('execCommand failed');
         }
+      } catch (err) {
+        document.body.removeChild(tempInput);
+        console.error('Copy failed:', err);
 
-        document.body.removeChild(textArea);
-      }
-
-      function showCopiedFeedback() {
-        text.textContent = 'Copied!';
-        button.classList.remove('bg-primary', 'hover:bg-primary/90');
-        button.classList.add('bg-green-600', 'hover:bg-green-700');
-
-        setTimeout(() => {
-          text.textContent = 'Copy Link';
-          button.classList.remove('bg-green-600', 'hover:bg-green-700');
-          button.classList.add('bg-primary', 'hover:bg-primary/90');
-        }, 2000);
-      }
-
-      function showFailedFeedback() {
+        // Show error feedback
         text.textContent = 'Failed';
         setTimeout(() => {
           text.textContent = 'Copy Link';
         }, 2000);
+
+        // Last resort: prompt user to copy manually
+        alert('Please copy this link manually:\n\n' + url);
       }
     }
   </script>
