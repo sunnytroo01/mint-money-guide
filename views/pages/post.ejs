@@ -23,7 +23,7 @@
   <div class="container mx-auto px-4 pt-24 pb-16 max-w-4xl">
     <!-- Category Badge and Meta Info -->
     <div class="flex flex-wrap items-center gap-4 mb-6">
-      <span class="category-badge text-sm px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full"><%= post.category %></span>
+      <span class="category-badge text-sm px-4 py-2 bg-primary text-white font-semibold rounded-full"><%= post.category %></span>
       <span class="text-sm text-gray-600 dark:text-gray-400 font-medium"><%= post.readingTime %> min read</span>
       <span class="text-sm text-gray-600 dark:text-gray-400">•</span>
       <span class="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
@@ -50,8 +50,8 @@
     </div>
 
     <!-- Social Share Buttons -->
-    <div class="flex flex-wrap items-center gap-3 mb-8 pb-6 border-b border-gray-200 dark:border-gray-700">
-      <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Share:</span>
+    <div class="flex flex-wrap items-center gap-3 mb-8 pb-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+      <span class="text-sm font-semibold text-gray-900 dark:text-white">Share:</span>
       <a href="https://twitter.com/intent/tweet?text=<%= encodeURIComponent(post.title) %>&url=<%= encodeURIComponent(meta.fullUrl) %>"
          target="_blank"
          rel="noopener noreferrer"
