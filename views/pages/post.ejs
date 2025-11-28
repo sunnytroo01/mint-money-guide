@@ -126,14 +126,53 @@
 
   <%- include('../partials/footer') %>
   <script>
-    // Copy link to clipboard function
-    async function copyToClipboard() {
+    // Copy link to clipboard function with fallback
+    function copyToClipboard() {
       const url = '<%= meta.fullUrl %>';
       const button = document.getElementById('copyLinkBtn');
       const text = document.getElementById('copyLinkText');
 
-      try {
-        await navigator.clipboard.writeText(url);
+      // Try modern clipboard API first
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url)
+          .then(() => {
+            showCopiedFeedback();
+          })
+          .catch((err) => {
+            console.error('Clipboard API failed:', err);
+            fallbackCopy(url);
+          });
+      } else {
+        // Use fallback method
+        fallbackCopy(url);
+      }
+
+      function fallbackCopy(text) {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+          const successful = document.execCommand('copy');
+          if (successful) {
+            showCopiedFeedback();
+          } else {
+            showFailedFeedback();
+          }
+        } catch (err) {
+          console.error('Fallback copy failed:', err);
+          showFailedFeedback();
+        }
+
+        document.body.removeChild(textArea);
+      }
+
+      function showCopiedFeedback() {
         text.textContent = 'Copied!';
         button.classList.remove('bg-primary', 'hover:bg-primary/90');
         button.classList.add('bg-green-600', 'hover:bg-green-700');
@@ -142,13 +181,14 @@
           text.textContent = 'Copy Link';
           button.classList.remove('bg-green-600', 'hover:bg-green-700');
           button.classList.add('bg-primary', 'hover:bg-primary/90');
-        }, 1000);
-      } catch (err) {
-        console.error('Failed to copy:', err);
+        }, 2000);
+      }
+
+      function showFailedFeedback() {
         text.textContent = 'Failed';
         setTimeout(() => {
           text.textContent = 'Copy Link';
-        }, 1000);
+        }, 2000);
       }
     }
   </script>
