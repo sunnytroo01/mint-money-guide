@@ -5521,7 +5521,7 @@ A: No. Your principal never decreases. Only the interest rate can change.</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1541354329998-f4d9a9f9297f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    featuredImage: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1920&h=1080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 0,
