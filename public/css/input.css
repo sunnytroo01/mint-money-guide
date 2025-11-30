@@ -19,10 +19,18 @@
   }
 
   /* Prevent orphaned words (widows) across all text content */
-  p, li, h1, h2, h3, h4, h5, h6, blockquote {
+  p, li, blockquote {
     text-wrap: pretty;
     orphans: 3;
     widows: 3;
+  }
+
+  /* Headings use balance for better title wrapping - prevents single words on last line */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+    orphans: 2;
+    widows: 2;
+    max-inline-size: 30em; /* Optimal line length for readability */
   }
 }
 

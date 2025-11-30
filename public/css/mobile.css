@@ -32,16 +32,19 @@
   h1 {
     font-size: 1.5rem;
     line-height: 1.3;
+    text-wrap: balance; /* Prevent orphaned words */
   }
 
   h2 {
     font-size: 1.25rem;
     line-height: 1.4;
+    text-wrap: balance; /* Prevent orphaned words */
   }
 
   h3 {
     font-size: 1.125rem;
     line-height: 1.4;
+    text-wrap: balance; /* Prevent orphaned words */
   }
 
   /* Override Tailwind text sizes */
