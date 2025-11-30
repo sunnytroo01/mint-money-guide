@@ -11,7 +11,8 @@ router.get('/', (req, res) => {
     currentPage: 1,
     totalPages: 1,
     meta: generateMetaTags({ title: 'Blog - Mint Money Guide', description: 'Wealth building articles and guides' }),
-    title: 'Blog'
+    title: 'Blog',
+    layout: false
   });
 });
 
@@ -26,7 +27,8 @@ router.get('/search', (req, res) => {
     currentPage: 1,
     totalPages: 1,
     meta: generateMetaTags({ title: `Search: ${query}`, description: 'Search results' }),
-    title: 'Search'
+    title: 'Search',
+    layout: false
   });
 });
 

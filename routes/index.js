@@ -30,7 +30,8 @@ router.get('/', async (req, res, next) => {
       categories,
       meta,
       schema,
-      title: 'Home'
+      title: 'Home',
+      layout: false
     });
   } catch (err) {
     next(err);
@@ -46,7 +47,8 @@ router.get('/about', (req, res) => {
 
   res.render('pages/contact', {
     meta,
-    title: 'About'
+    title: 'About',
+    layout: false
   });
 });
 
@@ -59,16 +61,17 @@ router.get('/subscribe', (req, res) => {
 
   res.render('pages/subscribe', {
     meta,
-    title: 'Subscribe'
+    title: 'Subscribe',
+    layout: false
   });
 });
 
 router.get('/privacy', (req, res) => {
-  res.render('pages/privacy', { title: 'Privacy Policy' });
+  res.render('pages/privacy', { title: 'Privacy Policy', layout: false });
 });
 
 router.get('/terms', (req, res) => {
-  res.render('pages/terms', { title: 'Terms of Service' });
+  res.render('pages/terms', { title: 'Terms of Service', layout: false });
 });
 
 router.get('/sitemap.xml', async (req, res, next) => {
@@ -105,7 +108,8 @@ router.get('/category/:category', async (req, res) => {
     currentPage: 1,
     totalPages: 1,
     meta: generateMetaTags({ title: `${category} - Mint Money Guide`, description: `${category} articles` }),
-    title: category
+    title: category,
+    layout: false
   });
 });
 
