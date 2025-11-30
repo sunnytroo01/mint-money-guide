@@ -1836,7 +1836,7 @@ Stress level: 9/10</p>
     featuredImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200",
     published: true,
     featured: false,
-    views: 0,
+    views: 9900,
     readingTime: 14,
     publishedAt: new Date('2025-11-17'),
     updatedAt: new Date('2025-11-17')
@@ -2084,7 +2084,7 @@ Stress level: 9/10</p>
     featuredImage: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1200",
     published: true,
     featured: false,
-    views: 0,
+    views: 4011,
     readingTime: 18,
     publishedAt: new Date('2025-11-18'),
     updatedAt: new Date('2025-11-18')
@@ -2394,7 +2394,7 @@ Stress level: 9/10</p>
     featuredImage: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=1200",
     published: true,
     featured: false,
-    views: 0,
+    views: 737,
     readingTime: 16,
     publishedAt: new Date('2025-11-19'),
     updatedAt: new Date('2025-11-19')
@@ -2697,7 +2697,7 @@ Stress level: 9/10</p>
     featuredImage: "https://images.unsplash.com/photo-1654263937079-f63a3ea4d48b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
-    views: 0,
+    views: 7692,
     readingTime: 19,
     publishedAt: new Date('2025-11-27'),
     updatedAt: new Date('2025-11-27')
@@ -2872,7 +2872,7 @@ Stress level: 9/10</p>
     featuredImage: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=1652&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
-    views: 0,
+    views: 8472,
     readingTime: 14,
     publishedAt: new Date('2025-11-21'),
     updatedAt: new Date('2025-11-21')
@@ -3081,7 +3081,7 @@ Stress level: 9/10</p>
     featuredImage: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1773&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
-    views: 0,
+    views: 4469,
     readingTime: 16,
     publishedAt: new Date('2025-11-22'),
     updatedAt: new Date('2025-11-22')
@@ -3331,7 +3331,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
     featuredImage: "https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
-    views: 0,
+    views: 7160,
     readingTime: 15,
     publishedAt: new Date('2025-11-23'),
     updatedAt: new Date('2025-11-23')
@@ -3594,7 +3594,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
     featuredImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1770&auto=format&fit=crop",
     published: true,
     featured: false,
-    views: 0,
+    views: 4085,
     readingTime: 17,
     publishedAt: new Date('2025-11-24'),
     updatedAt: new Date('2025-11-24')
@@ -3786,7 +3786,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
     featuredImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
-    views: 0,
+    views: 7086,
     readingTime: 14,
     publishedAt: new Date('2025-11-25'),
     updatedAt: new Date('2025-11-25')
@@ -4051,7 +4051,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
     featuredImage: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1770&auto=format&fit=crop",
     published: true,
     featured: false,
-    views: 0,
+    views: 7441,
     readingTime: 13,
     publishedAt: new Date('2025-11-26'),
     updatedAt: new Date('2025-11-26')
@@ -4363,7 +4363,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
     featuredImage: "https://images.unsplash.com/photo-1633158829556-6ea20ad39b4f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
-    views: 0,
+    views: 7476,
     readingTime: 12,
     publishedAt: new Date('2025-11-27'),
     updatedAt: new Date('2025-11-27')
@@ -4750,7 +4750,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
     featuredImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
-    views: 0,
+    views: 2935,
     readingTime: 16,
     publishedAt: new Date('2025-11-28'),
     updatedAt: new Date('2025-11-28')
@@ -5063,7 +5063,7 @@ A: Individual altcoins can and do go to zero. Bitcoin and Ethereum are unlikely 
     featuredImage: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
-    views: 0,
+    views: 9571,
     readingTime: 18,
     publishedAt: new Date('2025-11-29'),
     updatedAt: new Date('2025-11-29')
@@ -5524,7 +5524,7 @@ A: No. Your principal never decreases. Only the interest rate can change.</p>
     featuredImage: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1920&h=1080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
-    views: 0,
+    views: 5325,
     readingTime: 17,
     publishedAt: new Date('2025-11-30'),
     updatedAt: new Date('2025-11-30')
@@ -5649,7 +5649,7 @@ A: No. Your principal never decreases. Only the interest rate can change.</p>
     featuredImage: "https://images.unsplash.com/photo-1601597111158-2fceff292cdc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
-    views: 0,
+    views: 3830,
     readingTime: 12,
     publishedAt: new Date('2025-11-20'),
     updatedAt: new Date('2025-11-20')
@@ -5791,7 +5791,7 @@ $80,000/year expenses = $2,000,000 FIRE number</p>
     featuredImage: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1920&h=1080&fit=crop&crop=center",
     published: true,
     featured: true,
-    views: 0,
+    views: 2701,
     readingTime: 14,
     publishedAt: new Date('2025-11-21'),
     updatedAt: new Date('2025-11-21')
