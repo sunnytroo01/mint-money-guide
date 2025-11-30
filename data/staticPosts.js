@@ -2694,7 +2694,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1556742031-c6961e8560b0?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
     published: true,
     featured: false,
     views: 7692,
@@ -2869,7 +2869,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://plus.unsplash.com/premium_photo-1679923906285-386991e8d862?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
     published: true,
     featured: false,
     views: 8472,
@@ -5060,7 +5060,7 @@ A: Individual altcoins can and do go to zero. Bitcoin and Ethereum are unlikely 
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
     published: true,
     featured: true,
     views: 9571,
