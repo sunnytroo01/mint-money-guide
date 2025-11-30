@@ -65,19 +65,15 @@
   <!-- Google Search Console Verification (Add your verification code) -->
   <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
 
-  <!-- Google Analytics (Add your GA4 tracking ID) -->
-  <% if (process.env.GA_TRACKING_ID) { %>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= process.env.GA_TRACKING_ID %>"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNK7H3GSHC"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '<%= process.env.GA_TRACKING_ID %>', {
-      page_path: window.location.pathname,
-      anonymize_ip: true
-    });
+
+    gtag('config', 'G-DNK7H3GSHC');
   </script>
-  <% } %>
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2C5F4F">
