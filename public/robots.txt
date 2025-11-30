@@ -1,29 +1,74 @@
-# Mint Money Guide - robots.txt
-# Allow all search engines to crawl the site
+# Mint Money Guide - SEO Optimized robots.txt
+# Updated: 2025-11-29
+# Purpose: Guide search engines to quality content while protecting admin areas
 
+# Default crawl rules for all search engines
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /category/
+Allow: /images/
+Allow: /css/
+Allow: /js/
 Disallow: /admin/
 Disallow: /api/
-
-# Sitemap location
-Sitemap: https://wealthprompter.com/sitemap.xml
-
-# Crawl delay (optional, helps prevent server overload)
+Disallow: /api/views/
+Disallow: /*.json$
+Disallow: /search?
 Crawl-delay: 1
 
-# Specific rules for major search engines
+# Google Bot - Most important for SEO
 User-agent: Googlebot
 Allow: /
+Allow: /blog/
+Allow: /category/
 Disallow: /admin/
 Disallow: /api/
 
+# Google Image Bot - Allow image indexing
+User-agent: Googlebot-Image
+Allow: /images/
+Disallow: /admin/
+
+# Bing Bot - Second most important search engine
 User-agent: Bingbot
 Allow: /
+Allow: /blog/
+Allow: /category/
 Disallow: /admin/
 Disallow: /api/
 
+# Yahoo Slurp Bot
 User-agent: Slurp
 Allow: /
 Disallow: /admin/
 Disallow: /api/
+
+# DuckDuckGo Bot
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Baidu Bot (Chinese search engine)
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Yandex Bot (Russian search engine)
+User-agent: Yandex
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Crawl-delay: 2
+
+# Sitemap locations for search engines
+Sitemap: https://mintmoneyguide.com/sitemap.xml
+Sitemap: https://www.mintmoneyguide.com/sitemap.xml

@@ -7,6 +7,15 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=yes, email=yes, address=yes">
 
+  <!-- DNS Prefetch & Preconnect for Performance -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="//images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
   <!-- Primary Meta Tags -->
   <title><%= meta.title %></title>
   <meta name="title" content="<%= meta.title %>">
@@ -30,12 +39,45 @@
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="<%= meta.siteName %>">
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="<%= meta.twitterCard %>">
   <meta name="twitter:url" content="<%= meta.fullUrl %>">
   <meta name="twitter:title" content="<%= meta.title %>">
   <meta name="twitter:description" content="<%= meta.description %>">
   <meta name="twitter:image" content="<%= meta.imageUrl %>">
+  <meta name="twitter:site" content="@MintMoneyGuide">
+  <meta name="twitter:creator" content="@MintMoneyGuide">
+  <meta name="twitter:image:alt" content="<%= meta.title %>">
+
+  <!-- Article-specific meta tags (for blog posts) -->
+  <% if (meta.type === 'article' && typeof meta.publishedTime !== 'undefined') { %>
+  <meta property="article:published_time" content="<%= meta.publishedTime %>">
+  <meta property="article:modified_time" content="<%= meta.modifiedTime %>">
+  <meta property="article:author" content="<%= meta.author %>">
+  <meta property="article:section" content="<%= meta.section %>">
+  <% if (typeof meta.tags !== 'undefined' && meta.tags) { %>
+    <% meta.tags.forEach(tag => { %>
+  <meta property="article:tag" content="<%= tag %>">
+    <% }) %>
+  <% } %>
+  <% } %>
+
+  <!-- Google Search Console Verification (Add your verification code) -->
+  <!-- <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
+
+  <!-- Google Analytics (Add your GA4 tracking ID) -->
+  <% if (process.env.GA_TRACKING_ID) { %>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= process.env.GA_TRACKING_ID %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '<%= process.env.GA_TRACKING_ID %>', {
+      page_path: window.location.pathname,
+      anonymize_ip: true
+    });
+  </script>
+  <% } %>
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2C5F4F">
@@ -45,6 +87,7 @@
   <meta name="application-name" content="Mint Money Guide">
   <meta name="format-detection" content="telephone=no">
 
+  <!-- Structured Data (JSON-LD Schema.org) -->
   <% if (typeof schema !== 'undefined' && schema) { %>
     <% if (schema.post) { %>
       <script type="application/ld+json"><%- JSON.stringify(schema.post) %></script>
@@ -56,6 +99,33 @@
       <script type="application/ld+json"><%- JSON.stringify(schema) %></script>
     <% } %>
   <% } %>
+
+  <!-- WebSite Schema with SearchAction for Google Sitelinks Search Box -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mint Money Guide",
+    "description": "Expert advice on investing, passive income, real estate, and wealth building",
+    "url": "<%= meta.fullUrl.split('/').slice(0, 3).join('/') %>",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "<%= meta.fullUrl.split('/').slice(0, 3).join('/') %>/blog/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mint Money Guide",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "<%= meta.fullUrl.split('/').slice(0, 3).join('/') %>/images/logo.png"
+      }
+    }
+  }
+  </script>
 
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/css/output.css">

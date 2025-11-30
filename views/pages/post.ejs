@@ -1,26 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><%= meta.title %></title>
-  <meta name="description" content="<%= meta.description %>">
-  <meta name="keywords" content="<%= meta.keywords %>">
-  <link rel="canonical" href="<%= meta.canonical %>">
-  <meta property="og:title" content="<%= meta.title %>">
-  <meta property="og:description" content="<%= meta.description %>">
-  <meta property="og:image" content="<%= meta.imageUrl %>">
-  <meta property="og:url" content="<%= meta.fullUrl %>">
-  <meta property="og:type" content="article">
-  <meta name="twitter:card" content="summary_large_image">
-  <script type="application/ld+json"><%- JSON.stringify(schema.post) %></script>
-  <script type="application/ld+json"><%- JSON.stringify(schema.breadcrumb) %></script>
-  <link rel="stylesheet" href="/css/output.css">
-</head>
-<body>
-  <%- include('../partials/nav') %>
+<!-- Breadcrumb Navigation -->
+<nav class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700" aria-label="Breadcrumb">
+  <div class="container mx-auto px-4 py-3">
+    <ol class="flex items-center space-x-2 text-sm" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <% breadcrumbs.forEach((crumb, index) => { %>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="flex items-center">
+          <% if (index < breadcrumbs.length - 1) { %>
+            <a href="<%= crumb.url %>" itemprop="item" class="text-primary hover:text-primary/80 font-medium transition-colors">
+              <span itemprop="name"><%= crumb.name %></span>
+            </a>
+            <meta itemprop="position" content="<%= index + 1 %>" />
+            <svg class="w-4 h-4 mx-2 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+            </svg>
+          <% } else { %>
+            <span itemprop="name" class="text-gray-600 dark:text-gray-400"><%= crumb.name %></span>
+            <meta itemprop="position" content="<%= index + 1 %>" />
+          <% } %>
+        </li>
+      <% }) %>
+    </ol>
+  </div>
+</nav>
 
-  <div class="container mx-auto px-4 pt-7 md:pt-24 pb-16 max-w-4xl">
+<div class="container mx-auto px-4 pt-7 md:pt-12 pb-16 max-w-4xl">
     <!-- Category Badge and Meta Info -->
     <div class="flex flex-wrap items-center gap-4 mb-6">
       <span class="category-badge text-sm px-4 py-2 bg-primary text-white font-semibold rounded-full"><%= post.category %></span>
@@ -51,7 +53,6 @@
 
     <!-- Social Share Buttons -->
     <div class="flex flex-wrap items-center gap-3 mb-8 pb-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
-      <span class="text-sm font-semibold text-gray-900 dark:text-white">Share:</span>
       <a href="https://twitter.com/intent/tweet?text=<%= encodeURIComponent(post.title) %>&url=<%= encodeURIComponent(meta.fullUrl) %>"
          target="_blank"
          rel="noopener noreferrer"
@@ -88,16 +89,17 @@
         </svg>
         WhatsApp
       </a>
-      <button id="copyLinkBtn" onclick="copyToClipboard()"
-              class="flex items-center gap-2 px-4 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg transition-colors duration-200 font-medium text-sm">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
-        </svg>
-        <span id="copyLinkText">Copy Link</span>
-      </button>
     </div>
 
-    <img src="<%= post.featuredImage.includes('?') ? post.featuredImage.replace(/w=\d+/, 'w=1920').replace(/h=\d+/, 'h=1080') + (post.featuredImage.includes('&h=') ? '' : '&h=1080') : post.featuredImage + '?w=1920&h=1080&fit=crop&crop=center' %>" alt="<%= post.title %>" class="w-full rounded-2xl shadow-2xl mb-12" style="object-fit: cover; max-height: 600px;">
+    <img
+      src="<%= post.featuredImage.includes('?') ? post.featuredImage.replace(/w=\d+/, 'w=1920').replace(/h=\d+/, 'h=1080') + (post.featuredImage.includes('&h=') ? '' : '&h=1080') : post.featuredImage + '?w=1920&h=1080&fit=crop&crop=center' %>"
+      alt="<%= post.title %> - <%= post.excerpt.substring(0, 100) %>"
+      class="w-full rounded-2xl shadow-2xl mb-12"
+      style="object-fit: cover; max-height: 600px;"
+      loading="eager"
+      width="1920"
+      height="1080"
+      itemprop="image">
 
     <div class="prose-custom">
       <%- post.content %>
@@ -133,7 +135,6 @@
     <% } %>
   </div>
 
-  <%- include('../partials/footer') %>
   <script>
     // Copy link to clipboard - reliable cross-browser method
     function copyToClipboard() {
@@ -184,7 +185,3 @@
       }
     }
   </script>
-  <script src="/js/main.js"></script>
-  <script src="/js/darkmode.js"></script>
-</body>
-</html>
