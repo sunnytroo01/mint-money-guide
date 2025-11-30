@@ -22,11 +22,31 @@ app.use(helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-      fontSrc: ["'self'", "https://fonts.gstatic.com"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://fonts.googleapis.com",
+        "https://cdnjs.cloudflare.com",
+        "https://www.googletagmanager.com",
+        "https://www.google-analytics.com"
+      ],
+      styleSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "https://fonts.googleapis.com",
+        "https://cdnjs.cloudflare.com"
+      ],
+      fontSrc: [
+        "'self'",
+        "https://fonts.gstatic.com",
+        "https://cdnjs.cloudflare.com"
+      ],
       imgSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'"]
+      connectSrc: [
+        "'self'",
+        "https://www.google-analytics.com",
+        "https://analytics.google.com"
+      ]
     }
   }
 }));
