@@ -4,6 +4,7 @@ const path = require('path');
 const helmet = require('helmet');
 const compression = require('compression');
 const rateLimit = require('express-rate-limit');
+const expressLayouts = require('express-ejs-layouts');
 
 const indexRoutes = require('./routes/index');
 const blogRoutes = require('./routes/blog');
@@ -17,6 +18,8 @@ const PORT = process.env.PORT || 7382;
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+app.use(expressLayouts);
+app.set('layout', 'layouts/main');
 
 app.use(helmet({
   contentSecurityPolicy: {
