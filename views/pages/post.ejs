@@ -33,7 +33,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
         </svg>
-        <span><%= post.views %> views</span>
+        <span><%= post.views.toLocaleString() %> views</span>
       </span>
     </div>
 
@@ -45,9 +45,9 @@
       <div class="w-12 h-12 aspect-square bg-primary rounded-full flex items-center justify-center shadow-md p-2">
         <img src="/images/leaf.png" alt="Mint Money Guide" class="w-full h-full object-contain">
       </div>
-      <div>
-        <p class="font-semibold text-dark-bg dark:text-white">By <%= post.author.name %></p>
-        <p class="text-sm text-gray-600 dark:text-gray-400"><%= new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></p>
+      <div class="flex flex-col" style="gap: 2px;">
+        <p class="font-semibold text-dark-bg dark:text-white" style="margin: 0; padding: 0;">By <%= post.author.name %></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400" style="margin: 0; padding: 0;"><%= new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></p>
       </div>
     </div>
 
@@ -91,15 +91,23 @@
       </a>
     </div>
 
-    <img
-      src="<%= post.featuredImage.includes('?') ? post.featuredImage.replace(/w=\d+/, 'w=1920').replace(/h=\d+/, 'h=1080') + (post.featuredImage.includes('&h=') ? '' : '&h=1080') : post.featuredImage + '?w=1920&h=1080&fit=crop&crop=center' %>"
-      alt="<%= post.title %> - <%= post.excerpt.substring(0, 100) %>"
-      class="w-full rounded-2xl shadow-2xl mb-12"
-      style="object-fit: cover; max-height: 600px;"
-      loading="eager"
-      width="1920"
-      height="1080"
-      itemprop="image">
+    <!-- Featured Image with Loading Overlay -->
+    <div class="image-loader-container shadow-2xl mb-12" style="max-height: 600px;">
+      <!-- Loading Overlay - Brand Green -->
+      <div id="imageLoadingOverlay" class="image-loading-overlay"></div>
+
+      <!-- Featured Image -->
+      <img
+        id="featuredImage"
+        src="<%= post.featuredImage.includes('?') ? post.featuredImage.replace(/w=\d+/, 'w=1920').replace(/h=\d+/, 'h=1080') + (post.featuredImage.includes('&h=') ? '' : '&h=1080') : post.featuredImage + '?w=1920&h=1080&fit=crop&crop=center' %>"
+        alt="<%= post.title %> - <%= post.excerpt.substring(0, 100) %>"
+        class="w-full rounded-2xl"
+        style="object-fit: cover; max-height: 600px; opacity: 0;"
+        loading="eager"
+        width="1920"
+        height="1080"
+        itemprop="image">
+    </div>
 
     <div class="prose-custom">
       <%- post.content %>
@@ -136,6 +144,35 @@
   </div>
 
   <script>
+    // Featured image loading handler
+    (function() {
+      const featuredImage = document.getElementById('featuredImage');
+      const loadingOverlay = document.getElementById('imageLoadingOverlay');
+
+      function hideLoadingOverlay() {
+        loadingOverlay.classList.add('hidden');
+        featuredImage.classList.add('featured-image-loaded');
+        featuredImage.style.opacity = '1';
+      }
+
+      // If image is already cached/loaded
+      if (featuredImage.complete && featuredImage.naturalHeight !== 0) {
+        hideLoadingOverlay();
+      } else {
+        // Wait for image to load
+        featuredImage.addEventListener('load', hideLoadingOverlay);
+
+        // Fallback timeout in case of loading issues
+        setTimeout(hideLoadingOverlay, 5000);
+      }
+
+      // Handle loading errors
+      featuredImage.addEventListener('error', function() {
+        loadingOverlay.querySelector('.loading-text').textContent = 'Failed to load';
+        setTimeout(hideLoadingOverlay, 1500);
+      });
+    })();
+
     // Copy link to clipboard - reliable cross-browser method
     function copyToClipboard() {
       const url = '<%= meta.fullUrl %>';

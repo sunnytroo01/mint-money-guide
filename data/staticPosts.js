@@ -120,7 +120,7 @@ const posts = [
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1625513123245-fcb02d69ad12?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 1247,
@@ -286,7 +286,7 @@ const posts = [
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 892,
@@ -441,7 +441,7 @@ const posts = [
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 1056,
@@ -627,7 +627,7 @@ const posts = [
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1640622843377-6b5af9417e70?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 847,
@@ -848,7 +848,7 @@ Strategy: Maximized 401(k) and mega backdoor Roth, invested bonuses entirely, st
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1622579576507-03ebf0968f0f?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 1243,
@@ -1083,7 +1083,7 @@ Strategy: Maximized 401(k) and mega backdoor Roth, invested bonuses entirely, st
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1604689598793-b8bf1dc445a1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 1589,
@@ -1225,7 +1225,7 @@ Strategy: Maximized 401(k) and mega backdoor Roth, invested bonuses entirely, st
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 2341,
@@ -1395,7 +1395,7 @@ Strategy: Maximized 401(k) and mega backdoor Roth, invested bonuses entirely, st
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1603777953913-d4bace4bf01c?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 3127,
@@ -1617,7 +1617,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1651341050677-24dba59ce0fd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 2876,
@@ -1833,7 +1833,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1518183214770-9cffbec72538?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 9900,
@@ -2081,7 +2081,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://plus.unsplash.com/premium_photo-1661661583168-659045108488?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8U3R1ZGVudCUyMExvYW5zfGVufDB8fDB8fHww",
     published: true,
     featured: false,
     views: 4011,
@@ -2391,7 +2391,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1608111283577-43d930222227?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 737,
@@ -2694,7 +2694,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1556742111-a301076d9d18?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 7692,
@@ -2869,7 +2869,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1554224155-3a58922a22c3?q=80&w=1682&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 8472,
@@ -3078,7 +3078,7 @@ Stress level: 9/10</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 4469,
@@ -3328,7 +3328,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1593672755342-741a7f868732?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 7160,
@@ -3591,7 +3591,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 4085,
@@ -3783,7 +3783,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://plus.unsplash.com/premium_photo-1679397743946-ef0f12e366c6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 7086,
@@ -4048,7 +4048,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 7441,
@@ -4360,7 +4360,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1553729459-efe14ef6055d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: false,
     views: 7476,
@@ -4747,7 +4747,7 @@ $500/month spent on car payments, dining out, subscriptions = $0</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 2935,
@@ -5060,7 +5060,7 @@ A: Individual altcoins can and do go to zero. Bitcoin and Ethereum are unlikely 
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1605792657660-596af9009e82?q=80&w=1604&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 9571,
@@ -5521,7 +5521,7 @@ A: No. Your principal never decreases. Only the interest rate can change.</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1670071479748-9827788aa1ef?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 5325,
@@ -5646,7 +5646,7 @@ A: No. Your principal never decreases. Only the interest rate can change.</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 3830,
@@ -5788,7 +5788,7 @@ $80,000/year expenses = $2,000,000 FIRE number</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1592495989226-03f88104f8cc?q=80&w=1812&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 2701,
@@ -6041,7 +6041,7 @@ By year 5 with consistent contributions: $300K portfolio → $12K-15K annual div
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 4782,
@@ -6338,7 +6338,7 @@ Start collecting rent, building wealth</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1549421263-5ec394a5ad4c?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 6891,
@@ -6632,7 +6632,7 @@ Solution: Then focus 80% on earning more (side hustle) and 20% on cutting expens
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 3847,
@@ -6977,7 +6977,7 @@ Retiring around 2040? → Vanguard Target Retirement 2040 Fund (VFORX)</p>
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 5204,
@@ -7344,7 +7344,7 @@ Solution: Set automatic investments, check 4x per year maximum. More frequent ch
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=1920&h=1080&fit=crop",
+    featuredImage: "https://images.unsplash.com/photo-1716279083176-60af7a63cb03?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     published: true,
     featured: true,
     views: 4519,

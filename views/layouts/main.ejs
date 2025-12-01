@@ -147,5 +147,17 @@
   </div>
 
   <script src="/js/main.js"></script>
+
+  <!-- Disable right-click on images only -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('img').forEach(function(img) {
+        img.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+          return false;
+        });
+      });
+    });
+  </script>
 </body>
 </html>
