@@ -31,7 +31,12 @@ app.use(helmet({
         "https://fonts.googleapis.com",
         "https://cdnjs.cloudflare.com",
         "https://www.googletagmanager.com",
-        "https://www.google-analytics.com"
+        "https://www.google-analytics.com",
+        "https://cmp.gatekeeperconsent.com",
+        "https://the.gatekeeperconsent.com",
+        "https://www.ezojs.com",
+        "*.ezoic.net",
+        "*.ezstatic.com"
       ],
       styleSrc: [
         "'self'",
@@ -44,11 +49,15 @@ app.use(helmet({
         "https://fonts.gstatic.com",
         "https://cdnjs.cloudflare.com"
       ],
-      imgSrc: ["'self'", "data:", "https:"],
+      imgSrc: ["'self'", "data:", "https:", "*.ezoic.net", "*.ezstatic.com"],
       connectSrc: [
         "'self'",
         "https://www.google-analytics.com",
-        "https://analytics.google.com"
+        "https://analytics.google.com",
+        "*.ezoic.net",
+        "*.ezstatic.com",
+        "https://cmp.gatekeeperconsent.com",
+        "https://the.gatekeeperconsent.com"
       ]
     }
   }
@@ -78,6 +87,11 @@ app.use((req, res, next) => {
 
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
+
+// Ezoic ads.txt redirect
+app.get('/ads.txt', (req, res) => {
+  res.redirect(301, 'https://srv.adstxtmanager.com/19390/mintmoneyguide.com');
 });
 
 app.use('/', indexRoutes);
