@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (cookieConsent && acceptCookies) {
     const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+    const manageCookies = document.getElementById('manage-cookies');
+
     if (!cookiesAccepted) {
       cookieConsent.classList.remove('hidden');
       setTimeout(() => cookieConsent.style.transform = 'translateY(0)', 100);
@@ -59,6 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         cookieConsent.remove();
       }, 500);
     });
+
+    if (manageCookies) {
+      manageCookies.addEventListener('click', () => {
+        window.location.href = '/privacy';
+      });
+    }
   }
 
   const footerForm = document.getElementById('footer-subscribe-form');

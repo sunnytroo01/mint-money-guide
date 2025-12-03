@@ -127,14 +127,25 @@
    EZOIC PRIVACY BANNER CUSTOM STYLING
    ===================================================== */
 
-/* Main consent banner container */
+/* Hide the default broken Ezoic privacy banner */
 .fc-consent-root,
+.qc-cmp2-container,
+[id*="qc-cmp2"],
+[class*="qc-cmp2"],
+div[class*="privacy-preferences"],
+div[class*="Privacy"] {
+  display: none !important;
+}
+
+/* If Ezoic banner is needed, uncomment and style properly */
+/* Main consent banner container */
+/*.fc-consent-root,
 .qc-cmp2-container,
 [id*="qc-cmp2"],
 [class*="qc-cmp2"] {
   font-family: 'Space Grotesk', system-ui, sans-serif !important;
   z-index: 9999 !important;
-}
+}*/
 
 /* Banner background and container */
 .fc-dialog-container,
