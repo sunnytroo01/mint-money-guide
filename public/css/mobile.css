@@ -127,14 +127,36 @@
    EZOIC PRIVACY BANNER CUSTOM STYLING
    ===================================================== */
 
-/* Hide the default broken Ezoic privacy banner */
+/* Hide the default broken Ezoic privacy banner - AGGRESSIVE HIDING */
 .fc-consent-root,
 .qc-cmp2-container,
 [id*="qc-cmp2"],
 [class*="qc-cmp2"],
 div[class*="privacy-preferences"],
-div[class*="Privacy"] {
+div[class*="Privacy"],
+div[class*="privacy"],
+div[id*="privacy"],
+div[id*="Privacy"],
+[class*="consent"],
+[id*="consent"],
+div:has(> h2:contains("Privacy Preferences")),
+div:has(> h3:contains("Privacy Preferences")),
+div:has(> p:contains("We and our partners share information")) {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Nuclear option - hide any div in footer area with privacy text */
+footer ~ div,
+body > div:last-of-type {
+  &:has(*:contains("Privacy Preferences")) {
+    display: none !important;
+  }
 }
 
 /* If Ezoic banner is needed, uncomment and style properly */
