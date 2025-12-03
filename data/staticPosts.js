@@ -9799,7 +9799,7 @@ Solution: Set automatic investments, check 4x per year maximum. More frequent ch
       name: "Mint Money Guide Team",
       bio: "Expert financial strategists dedicated to helping you achieve financial freedom through proven wealth-building methods."
     },
-    featuredImage: "https://gemneoyeytjpuhkohnpy.supabase.co/storage/v1/object/public/Images/premium_photo-1679456904315-ecee6665c638.avif",
+    featuredImage: "https://gemneoyeytjpuhkohnpy.supabase.co/storage/v1/object/public/Images/money-image.avif",
     published: true,
     featured: true,
     views: 0,
