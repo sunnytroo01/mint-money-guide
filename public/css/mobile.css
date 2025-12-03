@@ -122,3 +122,253 @@
     padding: 1.5rem;
   }
 }
+
+/* =====================================================
+   EZOIC PRIVACY BANNER CUSTOM STYLING
+   ===================================================== */
+
+/* Main consent banner container */
+.fc-consent-root,
+.qc-cmp2-container,
+[id*="qc-cmp2"],
+[class*="qc-cmp2"] {
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+  z-index: 9999 !important;
+}
+
+/* Banner background and container */
+.fc-dialog-container,
+.qc-cmp2-summary-info,
+#qc-cmp2-ui {
+  background: linear-gradient(135deg, #2C5F4F 0%, #1a4035 100%) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+  border: 2px solid rgba(77, 155, 130, 0.3) !important;
+  padding: 2rem !important;
+  max-width: 600px !important;
+  margin: 1rem auto !important;
+}
+
+/* Title styling */
+.fc-dialog-headline,
+.qc-cmp2-title,
+[class*="title"],
+[class*="heading"] {
+  color: #ffffff !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 1rem !important;
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+}
+
+/* Body text */
+.fc-dialog-content,
+.qc-cmp2-summary-info p,
+.qc-cmp2-summary-info div,
+[class*="description"] {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Primary buttons (Accept, Save) */
+.fc-button-background,
+.qc-cmp2-button,
+button[mode="primary"],
+button[class*="accept"],
+button[class*="save"],
+button[class*="agree"] {
+  background: #4D9B82 !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.875rem 2rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2) !important;
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+  text-transform: none !important;
+}
+
+.fc-button-background:hover,
+.qc-cmp2-button:hover,
+button[mode="primary"]:hover {
+  background: #3D7A68 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Secondary buttons (Manage, Decline) */
+button[mode="secondary"],
+button[class*="manage"],
+button[class*="settings"],
+.fc-button-link {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 0.875rem 2rem !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+  text-transform: none !important;
+}
+
+button[mode="secondary"]:hover,
+button[class*="manage"]:hover,
+.fc-button-link:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  color: #ffffff !important;
+}
+
+/* Button container/group */
+.fc-dialog-buttons,
+.qc-cmp2-buttons,
+[class*="button-group"] {
+  display: flex !important;
+  gap: 1rem !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  margin-top: 1.5rem !important;
+}
+
+/* Links within banner */
+.fc-dialog-content a,
+.qc-cmp2-summary-info a {
+  color: #4D9B82 !important;
+  text-decoration: underline !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+.fc-dialog-content a:hover,
+.qc-cmp2-summary-info a:hover {
+  color: #5fb599 !important;
+}
+
+/* Close button (if any) */
+button[class*="close"],
+.fc-close {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  border: none !important;
+  font-size: 1.5rem !important;
+  cursor: pointer !important;
+  transition: color 0.2s ease !important;
+  padding: 0.5rem !important;
+}
+
+button[class*="close"]:hover,
+.fc-close:hover {
+  color: #ffffff !important;
+}
+
+/* Toggle switches (for preferences) */
+input[type="checkbox"][class*="toggle"],
+.qc-cmp2-toggle {
+  accent-color: #4D9B82 !important;
+}
+
+/* Privacy preferences panel/modal */
+.qc-cmp2-main,
+[class*="preferences-dialog"] {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  max-width: 800px !important;
+}
+
+/* Scrollbar styling for privacy panel */
+.qc-cmp2-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.qc-cmp2-main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.qc-cmp2-main::-webkit-scrollbar-thumb {
+  background: #2C5F4F;
+  border-radius: 4px;
+}
+
+.qc-cmp2-main::-webkit-scrollbar-thumb:hover {
+  background: #4D9B82;
+}
+
+/* Mobile responsiveness for privacy banner */
+@media (max-width: 640px) {
+  .fc-dialog-container,
+  .qc-cmp2-summary-info,
+  #qc-cmp2-ui {
+    margin: 0.5rem !important;
+    padding: 1.5rem !important;
+    border-radius: 12px !important;
+    max-width: calc(100% - 1rem) !important;
+  }
+
+  .fc-dialog-headline,
+  .qc-cmp2-title {
+    font-size: 1.25rem !important;
+  }
+
+  .fc-dialog-buttons,
+  .qc-cmp2-buttons {
+    flex-direction: column !important;
+  }
+
+  .fc-button-background,
+  .qc-cmp2-button,
+  button[mode="primary"],
+  button[mode="secondary"] {
+    width: 100% !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+}
+
+/* Overlay/backdrop */
+.fc-dialog-overlay,
+.qc-cmp2-shade,
+[class*="backdrop"] {
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+/* Tab navigation (if any) */
+[role="tab"],
+.qc-cmp2-tab {
+  color: #2C5F4F !important;
+  border-bottom: 3px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+[role="tab"][aria-selected="true"],
+.qc-cmp2-tab.active {
+  color: #2C5F4F !important;
+  border-bottom-color: #4D9B82 !important;
+  font-weight: 600 !important;
+}
+
+/* Vendor list items */
+.qc-cmp2-vendor-list-item,
+[class*="vendor-item"] {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 1rem 0 !important;
+}
+
+/* Success/confirmation messages */
+[class*="success"],
+[class*="confirmation"] {
+  background: #D4F4DD !important;
+  color: #166534 !important;
+  padding: 1rem !important;
+  border-radius: 8px !important;
+  border-left: 4px solid #4D9B82 !important;
+}
