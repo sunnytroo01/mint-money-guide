@@ -69,34 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const footerForm = document.getElementById('footer-subscribe-form');
-  if (footerForm) {
-    footerForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formData = new FormData(footerForm);
-      const data = Object.fromEntries(formData);
-      data.source = 'footer';
-
-      try {
-        const response = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
-
-        const result = await response.json();
-        if (result.success) {
-          alert('Thank you for subscribing!');
-          footerForm.reset();
-        } else {
-          alert(result.message);
-        }
-      } catch (error) {
-        alert('An error occurred. Please try again later.');
-      }
-    });
-  }
-
   const lazyImages = document.querySelectorAll('img[loading="lazy"]');
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {

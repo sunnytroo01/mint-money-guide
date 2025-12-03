@@ -73,12 +73,15 @@
       </ul>
       <p>These third parties have their own privacy policies governing their use of your information.</p>
 
-      <h2>Information Sharing with Partners</h2>
+      <h2>Information Sharing</h2>
       <p>We and our partners share information on your use of this website to help improve your experience. For more information, or to opt out click the Do Not Sell My Information button below.</p>
-      <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg mt-4 mb-8">
-        <h3 class="text-xl font-bold mb-3">California Privacy Rights (CCPA)</h3>
-        <p class="mb-4">If you are a California resident, you have the right to opt-out of the sale of your personal information. To exercise this right:</p>
-        <button onclick="window.__tcfapi && window.__tcfapi('displayConsentUi', 2, function() {})" class="btn-primary">
+
+      <h2>California Privacy Rights (CCPA)</h2>
+      <p>If you are a California resident, you have the right to opt-out of the sale of your personal information under the California Consumer Privacy Act (CCPA). To exercise this right, click the button below:</p>
+      <div class="mt-6 mb-8">
+        <button
+          onclick="if(window.__tcfapi){window.__tcfapi('displayConsentUi',2,function(){});}"
+          class="bg-primary hover:bg-primary/90 text-white font-bold py-3 px-6 rounded-lg transition-colors">
           Do Not Sell My Information
         </button>
       </div>

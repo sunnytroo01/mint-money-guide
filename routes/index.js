@@ -52,20 +52,6 @@ router.get('/about', (req, res) => {
   });
 });
 
-router.get('/subscribe', (req, res) => {
-  const meta = generateMetaTags({
-    title: 'Subscribe to Our Newsletter - Mint Money Guide',
-    description: 'Subscribe to receive expert financial advice, wealth-building tips, and exclusive content delivered to your inbox.',
-    url: `${req.protocol}://${req.get('host')}/subscribe`
-  });
-
-  res.render('pages/subscribe', {
-    meta,
-    title: 'Subscribe',
-    layout: false
-  });
-});
-
 router.get('/privacy', (req, res) => {
   res.render('pages/privacy', { title: 'Privacy Policy', layout: false });
 });
