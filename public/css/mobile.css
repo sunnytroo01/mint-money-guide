@@ -151,9 +151,7 @@
 
 /* Title styling */
 .fc-dialog-headline,
-.qc-cmp2-title,
-[class*="title"],
-[class*="heading"] {
+.qc-cmp2-title {
   color: #ffffff !important;
   font-size: 1.5rem !important;
   font-weight: 700 !important;
@@ -164,8 +162,7 @@
 /* Body text */
 .fc-dialog-content,
 .qc-cmp2-summary-info p,
-.qc-cmp2-summary-info div,
-[class*="description"] {
+.qc-cmp2-summary-info div {
   color: rgba(255, 255, 255, 0.9) !important;
   font-size: 1rem !important;
   line-height: 1.6 !important;
@@ -229,8 +226,7 @@ button[class*="manage"]:hover,
 
 /* Button container/group */
 .fc-dialog-buttons,
-.qc-cmp2-buttons,
-[class*="button-group"] {
+.qc-cmp2-buttons {
   display: flex !important;
   gap: 1rem !important;
   flex-wrap: wrap !important;
@@ -276,8 +272,7 @@ input[type="checkbox"][class*="toggle"],
 }
 
 /* Privacy preferences panel/modal */
-.qc-cmp2-main,
-[class*="preferences-dialog"] {
+.qc-cmp2-main {
   background: #ffffff !important;
   border-radius: 16px !important;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
@@ -335,8 +330,7 @@ input[type="checkbox"][class*="toggle"],
 
 /* Overlay/backdrop */
 .fc-dialog-overlay,
-.qc-cmp2-shade,
-[class*="backdrop"] {
+.qc-cmp2-shade {
   background: rgba(0, 0, 0, 0.6) !important;
   backdrop-filter: blur(4px) !important;
 }
@@ -357,18 +351,7 @@ input[type="checkbox"][class*="toggle"],
 }
 
 /* Vendor list items */
-.qc-cmp2-vendor-list-item,
-[class*="vendor-item"] {
+.qc-cmp2-vendor-list-item {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
   padding: 1rem 0 !important;
-}
-
-/* Success/confirmation messages */
-[class*="success"],
-[class*="confirmation"] {
-  background: #D4F4DD !important;
-  color: #166534 !important;
-  padding: 1rem !important;
-  border-radius: 8px !important;
-  border-left: 4px solid #4D9B82 !important;
 }
